@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+/* WealthShield Partnership — Brand tokens
+ * Client website is behind a Manus auth wall; brand palette designed for
+ * the category (B2B financial-services partnership) + the ICP (conservative
+ * CPA managing partners, 50-60). Premium / editorial / trust-forward.
+ * Theme: LIGHT body with navy header + navy CTA accents + warm gold accent.
+ */
+@theme {
+  /* Brand colors */
+  --color-primary: #0b2545;          /* deep navy — trust, finance */
+  --color-primary-hover: #081a34;
+  --color-primary-50: #eef3fb;
+  --color-primary-100: #d7e2ef;
+  --color-primary-200: #a9bfd9;
+  --color-primary-700: #061730;
+
+  --color-accent: #0b2545;            /* alias for deep navy (dark section bg) */
+  --color-accent-hover: #081a34;
+  --color-accent-800: #06142c;
+
+  --color-gold: #c8941e;              /* warm editorial gold — premium, not gaudy */
+  --color-gold-hover: #a97c15;
+  --color-gold-50: #fbf4e2;
+  --color-gold-100: #f5e6b8;
+
+  /* Surface */
+  --color-surface: #fbf8f2;           /* warm paper */
+  --color-surface-alt: #f3ede0;       /* warm card surface */
+  --color-surface-cool: #eef2f7;      /* cool neutral (form backgrounds) */
+  --color-surface-dark: #0b2545;      /* hero / dark sections */
+  --color-ink: #0a0f1c;
+  --color-ink-muted: #4b5366;
+  --color-ink-on-dark: rgba(255, 255, 255, 0.86);
+  --color-line: #e4decb;              /* warm line on paper */
+  --color-line-cool: #d8dde6;         /* cool line */
+
+  /* Fonts (variable set by next/font in layout.tsx) */
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+}
+
+:root {
+  --background: #fbf8f2;
+  --foreground: #0a0f1c;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 40, "WONK" 0;
+}
+
+/* Smooth scroll + scroll-padding so the fixed header doesn't hide anchor targets */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+/* Eyebrow label */
+.eyebrow {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--color-gold);
+}
+
+.eyebrow-on-dark {
+  color: var(--color-gold-100);
+}
+
+/* Navy dark sections with subtle pinstripe (editorial, not gridded) */
+.bg-pinstripe-navy {
+  background-color: var(--color-surface-dark);
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.025) 0px,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px,
+      transparent 18px
+    );
+}
+
+/* Gold accent underline for display headings */
+.heading-rule::after {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 2px;
+  background: var(--color-gold);
+  margin-top: 1rem;
+}
+
+.heading-rule-on-dark::after {
+  background: var(--color-gold-100);
+}
+
+/* Paper texture for warm sections */
+.bg-paper {
+  background-color: var(--color-surface);
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(200, 148, 30, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 80% 85%, rgba(11, 37, 69, 0.04) 0%, transparent 40%);
+}
+
+/* Serif display variant helper */
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+}
