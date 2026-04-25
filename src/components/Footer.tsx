@@ -21,13 +21,13 @@ export function Footer() {
         <div className="max-w-3xl mx-auto pt-4 mt-4 border-t border-white/10 space-y-3 text-[11px] text-white/55 leading-relaxed">
           <p>
             Securities offered through OneAmerica Securities, Inc., a
-            Registered Investment Advisor, Member FINRA, SIPC. Greater
-            Washington Financial Services is not an affiliate of OneAmerica
+            Registered Investment Advisor, Member FINRA, SIPC. Greater Washington
+            Retirement Income Solutions is not an affiliate of OneAmerica
             Securities or the companies of OneAmerica Financial and is not a
             broker-dealer or Registered Investment Advisor.
           </p>
           <p>
-            Greater Washington Financial Services may conduct life insurance
+            Greater Washington Retirement Income Solutions may conduct life insurance
             and securities business in Maryland and may be licensed in other
             states. Financial professionals cannot conduct life insurance or
             securities business in states in which they are not licensed.

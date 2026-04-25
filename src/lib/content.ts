@@ -26,7 +26,7 @@ export type Testimonial = {
 
 export const BRAND = {
   name: "WealthShield Partnership",
-  fullName: "WealthShield Partnership · Greater Washington Financial Services",
+  fullName: "WealthShield Partnership · Greater Washington Retirement Income Solutions",
   tagline:
     "A turnkey financial-planning partnership, built for CPA firms.",
   heroHook:
@@ -35,10 +35,10 @@ export const BRAND = {
     "The WealthShield Executive Partnership Program lets CPA firms deliver full-service retirement, tax, and wealth-planning to their existing high-income clients — without hiring, retraining, or disrupting tax season. We handle licensing, delivery, and compliance. Your firm keeps the relationship and earns a new, recurring revenue line.",
   shortPositioning:
     "Turnkey financial-planning delivered under your brand. You keep the client; we handle the work.",
-  phone: "301-242-3303",
-  phoneDisplay: "(301) 242-3303",
-  phoneHref: "tel:+13012423303",
-  email: "wdvincent@greaterwfs.com",
+  phone: "301-704-0133",
+  phoneDisplay: "(301) 704-0133",
+  phoneHref: "tel:+13017040133",
+  email: "info@greaterris.com",
   address: {
     street: "6411 Ivy Lane, Suite 602",
     city: "Greenbelt",
@@ -53,7 +53,7 @@ export const BRAND = {
 
 export const STATS: { value: string; label: string }[] = [
   { value: "$40–50k", label: "Planning revenue per qualified tax case*" },
-  { value: "31 yrs", label: "Greater Washington Financial Services in-market" },
+  { value: "31 yrs", label: "Greater Washington Retirement Income Solutions in-market" },
   { value: "129+ yrs", label: "Combined experience across our planning team" },
   { value: "5-phase", label: "System: Identify → Qualify → Onboard → Execute → Scale" },
 ];
@@ -198,7 +198,7 @@ export const TEAM: {
   {
     name: "W. Doug Vincent",
     title: "President & CEO",
-    creds: "30+ years · Greater Washington Financial Services",
+    creds: "30+ years · Greater Washington Retirement Income Solutions",
     body:
       "Previously MassMutual Agency Senior Partner; runs the partnership program end-to-end and is your direct contact through qualification.",
   },

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title:
     "The Executive Partnership Program for CPA firms — WealthShield Partnership",
   description:
-    "Deliver full-service retirement, tax-strategy, and wealth planning to your high-income CPA clients — without hiring, licensing, or disrupting tax season. 31 years of Greater Washington Financial Services expertise.",
+    "Deliver full-service retirement, tax-strategy, and wealth planning to your high-income CPA clients — without hiring, licensing, or disrupting tax season. Backed by 31 years of Greater Washington Retirement Income Solutions experience.",
   openGraph: {
     title: "WealthShield Partnership — Executive Partnership Program",
     description:
