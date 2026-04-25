@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { PrimaryCTA } from "@/components/PrimaryCTA";
 import { TEAM } from "@/lib/content";
@@ -5,6 +6,11 @@ import { TEAM } from "@/lib/content";
 /**
  * Team section — credential-forward, since the audience (CPA managing partners)
  * underwrites on credentials and tenure, not marketing gloss.
+ *
+ * 2026-04-25: client provided real headshots via Drive — replaced monogram
+ * placeholders with actual photos in circular crops. Photos reinforce the
+ * "real, credentialed people" positioning the credentialed audience requires.
+ *
  * Section ID: #team
  */
 export function TeamSection() {
@@ -36,9 +42,14 @@ export function TeamSection() {
           {TEAM.map((member, i) => (
             <Reveal key={member.name} delay={i * 60}>
               <article className="h-full bg-white/[0.05] backdrop-blur border border-white/10 rounded-2xl p-6 lg:p-7 hover:bg-white/[0.08] hover:border-[var(--color-gold)]/30 transition">
-                {/* Monogram initials instead of photo (no public headshots accessible) */}
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--color-gold)] to-[var(--color-gold-hover)] text-[var(--color-accent)] font-display font-semibold text-xl flex items-center justify-center shadow-lg shadow-[var(--color-gold)]/20">
-                  {initials(member.name)}
+                <div className="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-[var(--color-gold)]/30 ring-offset-2 ring-offset-[var(--color-accent)] shadow-lg shadow-black/30">
+                  <Image
+                    src={member.image}
+                    alt={`${member.name} — ${member.title}`}
+                    fill
+                    sizes="80px"
+                    className="object-cover"
+                  />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-semibold text-white leading-snug">
                   {member.name}
@@ -63,14 +74,4 @@ export function TeamSection() {
       </div>
     </section>
   );
-}
-
-function initials(name: string): string {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .map((p) => p[0])
-    .slice(0, 2)
-    .join("")
-    .toUpperCase();
 }

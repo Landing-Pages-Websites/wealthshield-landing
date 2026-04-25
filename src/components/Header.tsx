@@ -1,18 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BRAND } from "@/lib/content";
 
 /**
  * Landing-page header per landing-page-architect SKILL Rule #3:
- * wordmark logo + phone link + single primary CTA. No nav menu.
+ * logo + phone link + single primary CTA. No nav menu.
  *
- * Brand note 2026-04-24: WealthShield's live site is behind a Manus auth wall
- * so no logo asset is available. We render a text wordmark (Fraunces) with
- * a navy "shield" glyph. Per lp-mistakes 2026-04-24: always verify logo
- * visibility against header bg. Here: navy ink text on warm-paper/white
- * header — high contrast, readable.
+ * Brand note 2026-04-25: client provided official WealthShield Partnership
+ * logo (gold emblem + navy wordmark) via Doug Vincent's Drive bundle. PNG
+ * has transparent bg → sits cleanly on warm-paper header. Standing Rule #7:
+ * dark logo on light header = high contrast, readable in top + scrolled
+ * states.
  */
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,40 +36,17 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
         <Link
           href="#hero"
-          className="flex items-center gap-2.5 group"
+          className="flex items-center group"
           aria-label={`${BRAND.name} home`}
         >
-          {/* Shield glyph (gold stroke on navy fill) */}
-          <svg
-            className="h-9 sm:h-10 w-auto"
-            viewBox="0 0 40 46"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M20 2 4 8v14c0 10 7 18 16 22 9-4 16-12 16-22V8L20 2z"
-              fill="var(--color-primary)"
-              stroke="var(--color-gold)"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M13 22l5 5 9-10"
-              stroke="var(--color-gold)"
-              strokeWidth="2.2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              fill="none"
-            />
-          </svg>
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-[1.05rem] sm:text-[1.15rem] font-semibold tracking-tight text-[var(--color-accent)]">
-              WealthShield
-            </span>
-            <span className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[var(--color-gold)] font-semibold mt-0.5">
-              Partnership
-            </span>
-          </span>
+          <Image
+            src="/images/logo.png"
+            alt={`${BRAND.name} logo`}
+            width={305}
+            height={280}
+            priority
+            className="h-12 sm:h-14 w-auto"
+          />
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-4">
