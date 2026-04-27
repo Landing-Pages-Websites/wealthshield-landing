@@ -1,39 +1,40 @@
 @import "tailwindcss";
 
 /* WealthShield Partnership — Brand tokens
- * Palette sourced from greaterris.com (Greater Washington Retirement Income Solutions).
- * Theme master hue: 210 (blue). Primary brand blue: hsla(210,77%,54%) = #2f89e4.
- * CTA/button color on live site: #00b0f0. Link/accent: #03a9f4.
- * Dark sections use deep blue derived from hue 210.
+ * Palette sourced directly from greaterris.com computed styles.
+ * CTA button: rgb(0,176,240) = #00b0f0
+ * Link/heading blue: rgb(0,143,255) = #008fff
+ * Body bg: white #ffffff
+ * Body text: #0c1115 (near-black), muted: #6a6b6c
  */
 @theme {
-  /* Brand colors — sourced from greaterris.com */
-  --color-primary: #2f89e4;          /* brand blue — hsla(210,77%,54%) */
-  --color-primary-hover: #2070c8;
-  --color-primary-50: #eef6fd;
-  --color-primary-100: #cce4fa;
-  --color-primary-200: #99c9f5;
-  --color-primary-700: #1a5ca8;
+  /* Brand colors — from greaterris.com */
+  --color-primary: #00b0f0;          /* brand cyan-blue — CTA buttons on greaterris.com */
+  --color-primary-hover: #009ad4;
+  --color-primary-50: #e5f7fd;
+  --color-primary-100: #b3eafa;
+  --color-primary-200: #80dcf7;
+  --color-primary-700: #007aad;
 
-  --color-accent: #0a2d5e;            /* deep blue — dark section bg */
-  --color-accent-hover: #081f42;
-  --color-accent-800: #061830;
+  --color-accent: #008fff;            /* heading / link blue */
+  --color-accent-hover: #007ae0;
+  --color-accent-800: #005cb3;
 
-  --color-gold: #00b0f0;              /* bright cyan-blue — CTA highlight / eyebrows (from greaterris CTAs) */
-  --color-gold-hover: #009ad4;
-  --color-gold-50: #e5f7fd;
-  --color-gold-100: #b3eafa;
+  --color-gold: #008fff;              /* reuse heading blue for eyebrows/underlines */
+  --color-gold-hover: #007ae0;
+  --color-gold-50: #e5f3ff;
+  --color-gold-100: #b3d9ff;
 
   /* Surface */
-  --color-surface: #f5f8fc;           /* clean cool white */
-  --color-surface-alt: #eef3f9;       /* cool card surface */
-  --color-surface-cool: #e8f0f8;      /* form backgrounds */
-  --color-surface-dark: #0a2d5e;      /* hero / dark sections — deep blue */
-  --color-ink: #0a0f1c;
-  --color-ink-muted: #4b5a6e;
-  --color-ink-on-dark: rgba(255, 255, 255, 0.88);
-  --color-line: #d8e4f0;              /* cool blue-gray line */
-  --color-line-cool: #cdd8e8;
+  --color-surface: #ffffff;           /* white — matches greaterris.com */
+  --color-surface-alt: #f4f8fc;       /* very light blue-gray for alternating sections */
+  --color-surface-cool: #eef4fa;      /* form backgrounds */
+  --color-surface-dark: #003d6b;      /* dark sections — deep version of brand blue */
+  --color-ink: #0c1115;               /* near-black body text */
+  --color-ink-muted: #6a6b6c;         /* muted gray — from greaterris.com */
+  --color-ink-on-dark: rgba(255, 255, 255, 0.90);
+  --color-line: #dde8f0;
+  --color-line-cool: #ccd8e4;
 
   /* Fonts (variable set by next/font in layout.tsx) */
   --font-display: var(--font-fraunces);
@@ -41,8 +42,8 @@
 }
 
 :root {
-  --background: #f5f8fc;
-  --foreground: #0a0f1c;
+  --background: #ffffff;
+  --foreground: #0c1115;
 }
 
 body {
@@ -93,7 +94,7 @@ html {
     );
 }
 
-/* Blue accent underline for display headings */
+/* Brand blue accent underline for display headings */
 .heading-rule::after {
   content: "";
   display: block;
@@ -107,12 +108,12 @@ html {
   background: var(--color-gold-100);
 }
 
-/* Cool surface texture */
+/* Clean white surface */
 .bg-paper {
   background-color: var(--color-surface);
   background-image:
-    radial-gradient(circle at 20% 15%, rgba(47, 137, 228, 0.04) 0%, transparent 40%),
-    radial-gradient(circle at 80% 85%, rgba(10, 45, 94, 0.04) 0%, transparent 40%);
+    radial-gradient(circle at 20% 15%, rgba(0, 176, 240, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 80% 85%, rgba(0, 143, 255, 0.03) 0%, transparent 40%);
 }
 
 /* Serif display variant helper */
