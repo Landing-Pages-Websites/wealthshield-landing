@@ -199,41 +199,36 @@ export const TEAM: {
   {
     name: "W. Doug Vincent",
     title: "President & CEO",
-    creds: "30+ years · Greater Washington Retirement Income Solutions",
-    body:
-      "Previously MassMutual Agency Senior Partner; runs the partnership program end-to-end and is your direct contact through qualification.",
+    creds: "",
+    body: "",
     image: "/images/team-doug-vincent.jpg",
   },
   {
     name: "Michael Epps",
-    title: "Managing Partner, Planning",
-    creds: "ChFC® · RICP® · 25+ years",
-    body:
-      "Retirement income planning, estate preservation, tax efficiency. Rochester Institute of Technology. Leads complex pre-retiree engagements.",
+    title: "",
+    creds: "",
+    body: "",
     image: "/images/team-michael-epps.jpg",
   },
   {
     name: "Kalif Gallego",
-    title: "Managing Partner, Planning",
-    creds: "RICP® · 17+ years",
-    body:
-      "Retirement readiness, tax reduction strategies, estate coordination for business owners. Fintech-fluent and client-experience obsessed.",
+    title: "",
+    creds: "",
+    body: "",
     image: "/images/team-kalif-gallego.jpg",
   },
   {
     name: "Shona Bell",
-    title: "Founder, Tax Strategy",
-    creds: "CPA · 20+ years",
-    body:
-      "Strategic growth-focused tax planning for business owners. Founder of Beyond Accounting & Tax; specialist in advanced entity and comp design.",
+    title: "",
+    creds: "",
+    body: "",
     image: "/images/team-shona-bell.jpg",
   },
   {
     name: "Jay Moore",
-    title: "Co-Founder, Tax Strategy",
-    creds: "CPA",
-    body:
-      "High-income planning, advanced deduction strategies, and retirement plan design (Cash Balance, Defined Benefit). Pairs with your firm on complex work.",
+    title: "",
+    creds: "",
+    body: "",
     image: "/images/team-jay-moore.jpg",
   },
 ];

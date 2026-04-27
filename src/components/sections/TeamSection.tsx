@@ -48,15 +48,21 @@ export function TeamSection() {
                 <h3 className="mt-5 font-display text-xl font-semibold text-[var(--color-ink)] leading-snug">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-sm text-[var(--color-primary)] font-semibold">
-                  {member.title}
-                </p>
-                <p className="mt-2 text-xs text-[var(--color-ink-muted)] uppercase tracking-wider font-semibold">
-                  {member.creds}
-                </p>
-                <p className="mt-4 text-sm text-[var(--color-ink-muted)] leading-relaxed">
-                  {member.body}
-                </p>
+                {member.title && (
+                  <p className="mt-1 text-sm text-[var(--color-primary)] font-semibold">
+                    {member.title}
+                  </p>
+                )}
+                {member.creds && (
+                  <p className="mt-2 text-xs text-[var(--color-ink-muted)] uppercase tracking-wider font-semibold">
+                    {member.creds}
+                  </p>
+                )}
+                {member.body && (
+                  <p className="mt-4 text-sm text-[var(--color-ink-muted)] leading-relaxed">
+                    {member.body}
+                  </p>
+                )}
               </article>
             </Reveal>
           ))}
