@@ -47,7 +47,7 @@ export function PainSection() {
         </div>
 
         <Reveal>
-          <PrimaryCTA variant="default" label="See how we solve this" />
+          <PrimaryCTA variant="default" label="Schedule a Strategy Call" />
         </Reveal>
       </div>
     </section>

@@ -48,7 +48,7 @@ export function AuthoritySection() {
         </div>
 
         <Reveal>
-          <PrimaryCTA label="See if my firm fits" />
+          <PrimaryCTA label="Schedule a Strategy Call" />
         </Reveal>
       </div>
     </section>

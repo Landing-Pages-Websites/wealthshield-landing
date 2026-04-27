@@ -107,7 +107,7 @@ export function ProcessSection() {
         </div>
 
         <Reveal>
-          <PrimaryCTA label="Start with Phase 1 — Identify" />
+          <PrimaryCTA label="Schedule a Strategy Call" />
         </Reveal>
       </div>
     </section>

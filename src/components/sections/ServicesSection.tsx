@@ -121,7 +121,7 @@ export function ServicesSection() {
 
                   <PrimaryCTA
                     variant={dark ? "onDark" : "default"}
-                    label="Request the partnership brief"
+                    label="Schedule a Strategy Call"
                     align="start"
                     className="mt-8"
                   />

@@ -63,7 +63,7 @@ export function TeamSection() {
         </div>
 
         <Reveal>
-          <PrimaryCTA variant="default" label="Meet the team on a strategy call" />
+          <PrimaryCTA variant="default" label="Schedule a Strategy Call" />
         </Reveal>
       </div>
     </section>
