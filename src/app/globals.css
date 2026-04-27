@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
 /* WealthShield Partnership — Brand tokens
- * Client website is behind a Manus auth wall; brand palette designed for
- * the category (B2B financial-services partnership) + the ICP (conservative
- * CPA managing partners, 50-60). Premium / editorial / trust-forward.
- * Theme: LIGHT body with navy header + navy CTA accents + warm gold accent.
+ * Palette sourced from greaterris.com (Greater Washington Retirement Income Solutions).
+ * Theme master hue: 210 (blue). Primary brand blue: hsla(210,77%,54%) = #2f89e4.
+ * CTA/button color on live site: #00b0f0. Link/accent: #03a9f4.
+ * Dark sections use deep blue derived from hue 210.
  */
 @theme {
-  /* Brand colors */
-  --color-primary: #0b2545;          /* deep navy — trust, finance */
-  --color-primary-hover: #081a34;
-  --color-primary-50: #eef3fb;
-  --color-primary-100: #d7e2ef;
-  --color-primary-200: #a9bfd9;
-  --color-primary-700: #061730;
+  /* Brand colors — sourced from greaterris.com */
+  --color-primary: #2f89e4;          /* brand blue — hsla(210,77%,54%) */
+  --color-primary-hover: #2070c8;
+  --color-primary-50: #eef6fd;
+  --color-primary-100: #cce4fa;
+  --color-primary-200: #99c9f5;
+  --color-primary-700: #1a5ca8;
 
-  --color-accent: #0b2545;            /* alias for deep navy (dark section bg) */
-  --color-accent-hover: #081a34;
-  --color-accent-800: #06142c;
+  --color-accent: #0a2d5e;            /* deep blue — dark section bg */
+  --color-accent-hover: #081f42;
+  --color-accent-800: #061830;
 
-  --color-gold: #c8941e;              /* warm editorial gold — premium, not gaudy */
-  --color-gold-hover: #a97c15;
-  --color-gold-50: #fbf4e2;
-  --color-gold-100: #f5e6b8;
+  --color-gold: #00b0f0;              /* bright cyan-blue — CTA highlight / eyebrows (from greaterris CTAs) */
+  --color-gold-hover: #009ad4;
+  --color-gold-50: #e5f7fd;
+  --color-gold-100: #b3eafa;
 
   /* Surface */
-  --color-surface: #fbf8f2;           /* warm paper */
-  --color-surface-alt: #f3ede0;       /* warm card surface */
-  --color-surface-cool: #eef2f7;      /* cool neutral (form backgrounds) */
-  --color-surface-dark: #0b2545;      /* hero / dark sections */
+  --color-surface: #f5f8fc;           /* clean cool white */
+  --color-surface-alt: #eef3f9;       /* cool card surface */
+  --color-surface-cool: #e8f0f8;      /* form backgrounds */
+  --color-surface-dark: #0a2d5e;      /* hero / dark sections — deep blue */
   --color-ink: #0a0f1c;
-  --color-ink-muted: #4b5366;
-  --color-ink-on-dark: rgba(255, 255, 255, 0.86);
-  --color-line: #e4decb;              /* warm line on paper */
-  --color-line-cool: #d8dde6;         /* cool line */
+  --color-ink-muted: #4b5a6e;
+  --color-ink-on-dark: rgba(255, 255, 255, 0.88);
+  --color-line: #d8e4f0;              /* cool blue-gray line */
+  --color-line-cool: #cdd8e8;
 
   /* Fonts (variable set by next/font in layout.tsx) */
   --font-display: var(--font-fraunces);
@@ -41,7 +41,7 @@
 }
 
 :root {
-  --background: #fbf8f2;
+  --background: #f5f8fc;
   --foreground: #0a0f1c;
 }
 
@@ -73,14 +73,14 @@ html {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-size: 0.72rem;
-  color: var(--color-gold);
+  color: var(--color-primary);
 }
 
 .eyebrow-on-dark {
   color: var(--color-gold-100);
 }
 
-/* Navy dark sections with subtle pinstripe (editorial, not gridded) */
+/* Dark sections with subtle pinstripe */
 .bg-pinstripe-navy {
   background-color: var(--color-surface-dark);
   background-image:
@@ -93,13 +93,13 @@ html {
     );
 }
 
-/* Gold accent underline for display headings */
+/* Blue accent underline for display headings */
 .heading-rule::after {
   content: "";
   display: block;
   width: 3.5rem;
   height: 2px;
-  background: var(--color-gold);
+  background: var(--color-primary);
   margin-top: 1rem;
 }
 
@@ -107,12 +107,12 @@ html {
   background: var(--color-gold-100);
 }
 
-/* Paper texture for warm sections */
+/* Cool surface texture */
 .bg-paper {
   background-color: var(--color-surface);
   background-image:
-    radial-gradient(circle at 20% 15%, rgba(200, 148, 30, 0.04) 0%, transparent 40%),
-    radial-gradient(circle at 80% 85%, rgba(11, 37, 69, 0.04) 0%, transparent 40%);
+    radial-gradient(circle at 20% 15%, rgba(47, 137, 228, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 80% 85%, rgba(10, 45, 94, 0.04) 0%, transparent 40%);
 }
 
 /* Serif display variant helper */
