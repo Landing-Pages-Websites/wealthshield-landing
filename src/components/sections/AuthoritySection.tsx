@@ -10,7 +10,7 @@ export function AuthoritySection() {
   return (
     <section
       id="who-its-for"
-      className="bg-paper py-20 lg:py-28 border-b border-[var(--color-line)]"
+      className="bg-[var(--color-surface)] py-20 lg:py-28 border-b border-[var(--color-line)]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">

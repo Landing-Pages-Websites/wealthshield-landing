@@ -10,12 +10,9 @@ type Props = {
 };
 
 /**
- * Dual CTA for WealthShield LP — button + phone link side-by-side.
- * Task has has_phone_leads=true, so we always offer the phone as a secondary
- * CTA per style-preferences 2026-04-22.
- *
- * Use align="start" inside a left-aligned split-hero copy column.
- * Use align="center" below a centered content section.
+ * Unified CTA — same brand blue button regardless of section background.
+ * onDark: phone secondary uses white border + white text.
+ * default: phone secondary uses dark border + dark text.
  */
 export function PrimaryCTA({
   label = BRAND.primaryCtaLabel,
@@ -32,13 +29,10 @@ export function PrimaryCTA({
     <div
       className={`flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center ${justify} gap-3 mt-8 ${className}`}
     >
+      {/* Primary button — always brand blue, white text */}
       <a
         href={href}
-        className={
-          onDark
-            ? "inline-flex items-center justify-center bg-[var(--color-gold)] hover:bg-[var(--color-gold-hover)] text-[var(--color-accent)] px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-lg shadow-black/30"
-            : "inline-flex items-center justify-center bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-sm"
-        }
+        className="inline-flex items-center justify-center bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-sm"
       >
         {label}
         <svg
@@ -55,13 +49,14 @@ export function PrimaryCTA({
         </svg>
       </a>
 
+      {/* Secondary phone link — adapts to light/dark section */}
       {showPhone && (
         <a
           href={BRAND.phoneHref}
           className={
             onDark
-              ? "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-base border border-white/25 text-white hover:bg-white/10 transition"
-              : "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-base border border-[var(--color-accent)]/20 text-[var(--color-accent)] hover:bg-[var(--color-accent)]/5 transition"
+              ? "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-base border border-white/30 text-white hover:bg-white/10 transition"
+              : "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-base border border-[var(--color-ink)]/20 text-[var(--color-ink)] hover:bg-[var(--color-ink)]/5 transition"
           }
         >
           <svg

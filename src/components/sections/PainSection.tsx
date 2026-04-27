@@ -10,7 +10,7 @@ export function PainSection() {
   return (
     <section
       id="challenges"
-      className="bg-[var(--color-surface-alt)] py-20 lg:py-28 relative overflow-hidden"
+      className="bg-[var(--color-surface)] py-20 lg:py-28 relative overflow-hidden"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
         <Reveal className="max-w-3xl">

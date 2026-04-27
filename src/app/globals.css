@@ -27,8 +27,8 @@
 
   /* Surface */
   --color-surface: #ffffff;
-  --color-surface-alt: #f4f8fc;       /* very light blue-tint for alternating sections */
-  --color-surface-cool: #eef4fa;
+  --color-surface-alt: #eef4fa;       /* alternating section bg — visibly different from white */
+  --color-surface-cool: #ddeefa;      /* form inset / deep card */
   --color-surface-dark: #0c1115;      /* dark section bg — near-black, not blue */
   --color-ink: #0c1115;
   --color-ink-muted: #6a6b6c;
@@ -108,9 +108,9 @@ html {
   background: var(--color-gold-100);
 }
 
-/* Clean white surface */
+/* bg-paper = alternating light blue-gray (used by Stats, Authority, Services, Testimonials) */
 .bg-paper {
-  background-color: var(--color-surface);
+  background-color: var(--color-surface-alt);
 }
 
 /* Serif display variant helper */

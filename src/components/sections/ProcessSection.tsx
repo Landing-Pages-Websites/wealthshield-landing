@@ -10,7 +10,7 @@ export function ProcessSection() {
   return (
     <section
       id="how-it-works"
-      className="bg-[var(--color-surface)] py-20 lg:py-28 relative"
+      className="bg-[var(--color-surface-alt)] py-20 lg:py-28 relative"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <Reveal className="max-w-3xl">
