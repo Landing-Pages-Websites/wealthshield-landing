@@ -87,7 +87,7 @@ export const SERVICES: ServicePillar[] = [
     label: "Retirement Planning",
     heading: "Retirement & Income Planning",
     body:
-      "Your pre-retiree clients (typically 50–65, $1M+ in taxable income) need a real retirement income strategy — not a 401(k) rollover quote. Our planners, led by Michael Epps (ChFC®, RICP®) and Kalif Gallego (RICP®), build full retirement-readiness plans: withdrawal sequencing, Social Security optimization, Roth conversion ladders, pension elections, and long-term wealth preservation. Every plan is co-branded with your firm, delivered through your client relationship, and designed to turn a one-off tax filing into a decade-long advisory mandate.",
+      "Your pre-retiree clients (typically 50–65, $1M+ in taxable income) need a real retirement income strategy — not a 401(k) rollover quote. Our planning team builds full retirement-readiness plans: withdrawal sequencing, Social Security optimization, Roth conversion ladders, pension elections, and long-term wealth preservation. Every plan is co-branded with your firm, delivered through your client relationship, and designed to turn a one-off tax filing into a decade-long advisory mandate.",
     image: "/images/service-1.png",
     outcomes: [
       "Full retirement income plans per client",
@@ -101,7 +101,7 @@ export const SERVICES: ServicePillar[] = [
     label: "Tax Strategy",
     heading: "Advanced Tax Strategy & Planning",
     body:
-      "Your clients already trust you with compliance. We layer on the planning side — the strategies that move the needle when $1M+ of income is in play. Led by Shona Bell, CPA and Jay Moore, CPA, our tax-strategy team builds entity restructurings, retirement-plan design (Cash Balance, Defined Benefit, Solo 401(k)), Qualified Opportunity Zone placements, charitable structures, and owner-compensation optimization. Everything runs through your firm. Your partners stay in control of the relationship; we deliver the specialist work behind the scenes.",
+      "Your clients already trust you with compliance. We layer on the planning side — the strategies that move the needle when $1M+ of income is in play. Our tax-strategy team builds entity restructurings, retirement-plan design (Cash Balance, Defined Benefit, Solo 401(k)), Qualified Opportunity Zone placements, charitable structures, and owner-compensation optimization. Everything runs through your firm. Your partners stay in control of the relationship; we deliver the specialist work behind the scenes.",
     image: "/images/service-2.png",
     outcomes: [
       "Entity + comp restructuring",
