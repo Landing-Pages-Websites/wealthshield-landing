@@ -11,8 +11,7 @@ export function ContactSection() {
       {/* Ambient glows + pinstripe */}
       <div className="absolute inset-0 -z-0 bg-pinstripe-navy" />
       <div className="pointer-events-none absolute inset-0 -z-0">
-        <div className="absolute top-0 -left-32 w-[32rem] h-[32rem] rounded-full bg-[var(--color-primary)]/25 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-[26rem] h-[26rem] rounded-full bg-[var(--color-gold)]/12 blur-[120px]" />
+        <div className="absolute top-0 -left-32 w-[32rem] h-[32rem] rounded-full bg-white/[0.03] blur-[120px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-16 items-center z-10">
@@ -35,7 +34,7 @@ export function ContactSection() {
               "No program materials are pushed afterward unless you ask",
             ].map((b) => (
               <li key={b} className="flex items-start gap-3 text-white/90">
-                <span className="mt-1 w-5 h-5 rounded-full bg-[var(--color-gold)] text-[var(--color-accent)] flex items-center justify-center flex-shrink-0">
+                <span className="mt-1 w-5 h-5 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center flex-shrink-0">
                   <svg
                     className="w-3 h-3"
                     viewBox="0 0 24 24"

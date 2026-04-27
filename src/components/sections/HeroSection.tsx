@@ -18,8 +18,7 @@ export function HeroSection() {
     >
       {/* Ambient gradient glows — navy + warm gold wash */}
       <div className="pointer-events-none absolute inset-0 -z-0">
-        <div className="absolute top-1/4 -left-44 w-[36rem] h-[36rem] rounded-full bg-[var(--color-primary)]/40 blur-[140px]" />
-        <div className="absolute bottom-0 right-0 w-[30rem] h-[30rem] rounded-full bg-[var(--color-gold)]/15 blur-[140px]" />
+        <div className="absolute top-1/3 right-0 w-[28rem] h-[28rem] rounded-full bg-white/[0.03] blur-[120px]" />
       </div>
 
       {/* Fine gold rule at the very top (editorial mark) */}
@@ -102,7 +101,7 @@ export function HeroSection() {
           <div className="relative">
             {/* Tiny gold chip above form for editorial framing */}
             <div className="absolute -top-3 left-4 z-10">
-              <span className="inline-block bg-[var(--color-gold)] text-[var(--color-accent)] text-[10px] font-bold uppercase tracking-[0.18em] px-3 py-1 rounded-full shadow-md">
+              <span className="inline-block bg-[var(--color-primary)] text-white text-[10px] font-bold uppercase tracking-[0.18em] px-3 py-1 rounded-full shadow-md">
                 Executive Partnership Program
               </span>
             </div>

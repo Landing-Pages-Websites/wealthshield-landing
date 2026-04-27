@@ -1,40 +1,40 @@
 @import "tailwindcss";
 
 /* WealthShield Partnership — Brand tokens
- * Palette sourced directly from greaterris.com computed styles.
- * CTA button: rgb(0,176,240) = #00b0f0
- * Link/heading blue: rgb(0,143,255) = #008fff
- * Body bg: white #ffffff
- * Body text: #0c1115 (near-black), muted: #6a6b6c
+ * Brand blue #00b0f0 used ONLY for CTA buttons and 1–2 dark section backgrounds.
+ * Headings, body, borders stay near-black / dark-gray so CTAs pop and text is readable.
+ * Palette sourced from greaterris.com: CTA #00b0f0, links #008fff, body #0c1115, muted #6a6b6c.
  */
 @theme {
-  /* Brand colors — from greaterris.com */
-  --color-primary: #00b0f0;          /* brand cyan-blue — CTA buttons on greaterris.com */
+  /* CTA / button color — brand cyan-blue, white text on top */
+  --color-primary: #00b0f0;
   --color-primary-hover: #009ad4;
   --color-primary-50: #e5f7fd;
   --color-primary-100: #b3eafa;
   --color-primary-200: #80dcf7;
   --color-primary-700: #007aad;
 
-  --color-accent: #008fff;            /* heading / link blue */
-  --color-accent-hover: #007ae0;
-  --color-accent-800: #005cb3;
+  /* Headings and dark section backgrounds — near-black, NOT blue */
+  --color-accent: #0c1115;
+  --color-accent-hover: #1a2330;
+  --color-accent-800: #060a0e;
 
-  --color-gold: #008fff;              /* reuse heading blue for eyebrows/underlines */
-  --color-gold-hover: #007ae0;
-  --color-gold-50: #e5f3ff;
-  --color-gold-100: #b3d9ff;
+  /* Eyebrow / decorative accent — a restrained version of brand blue */
+  --color-gold: #0099cc;
+  --color-gold-hover: #007aad;
+  --color-gold-50: #e5f7fd;
+  --color-gold-100: #b3eafa;
 
   /* Surface */
-  --color-surface: #ffffff;           /* white — matches greaterris.com */
-  --color-surface-alt: #f4f8fc;       /* very light blue-gray for alternating sections */
-  --color-surface-cool: #eef4fa;      /* form backgrounds */
-  --color-surface-dark: #003d6b;      /* dark sections — deep version of brand blue */
-  --color-ink: #0c1115;               /* near-black body text */
-  --color-ink-muted: #6a6b6c;         /* muted gray — from greaterris.com */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f8fc;       /* very light blue-tint for alternating sections */
+  --color-surface-cool: #eef4fa;
+  --color-surface-dark: #0c1115;      /* dark section bg — near-black, not blue */
+  --color-ink: #0c1115;
+  --color-ink-muted: #6a6b6c;
   --color-ink-on-dark: rgba(255, 255, 255, 0.90);
-  --color-line: #dde8f0;
-  --color-line-cool: #ccd8e4;
+  --color-line: #e2e8ef;
+  --color-line-cool: #d0dae4;
 
   /* Fonts (variable set by next/font in layout.tsx) */
   --font-display: var(--font-fraunces);
@@ -74,14 +74,14 @@ html {
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-size: 0.72rem;
-  color: var(--color-primary);
+  color: var(--color-gold);
 }
 
 .eyebrow-on-dark {
   color: var(--color-gold-100);
 }
 
-/* Dark sections with subtle pinstripe */
+/* Dark sections */
 .bg-pinstripe-navy {
   background-color: var(--color-surface-dark);
   background-image:
@@ -94,7 +94,7 @@ html {
     );
 }
 
-/* Brand blue accent underline for display headings */
+/* Subtle brand blue accent underline */
 .heading-rule::after {
   content: "";
   display: block;
@@ -111,9 +111,6 @@ html {
 /* Clean white surface */
 .bg-paper {
   background-color: var(--color-surface);
-  background-image:
-    radial-gradient(circle at 20% 15%, rgba(0, 176, 240, 0.04) 0%, transparent 40%),
-    radial-gradient(circle at 80% 85%, rgba(0, 143, 255, 0.03) 0%, transparent 40%);
 }
 
 /* Serif display variant helper */
