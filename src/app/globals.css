@@ -1,49 +1,48 @@
 @import "tailwindcss";
 
 /* WealthShield Partnership — Brand tokens
- * Brand blue #00b0f0 used ONLY for CTA buttons and 1–2 dark section backgrounds.
- * Headings, body, borders stay near-black / dark-gray so CTAs pop and text is readable.
- * Palette sourced from greaterris.com: CTA #00b0f0, links #008fff, body #0c1115, muted #6a6b6c.
+ * Sourced from live wealthshieldpartnership.com CSS (--primary, --chart-1, --primary-foreground).
+ * Navy #1A3A52 · Gold #D4AF37 · Warm paper #FAF8F3 · Font: Playfair Display
  */
 @theme {
-  /* CTA / button color — brand cyan-blue, white text on top */
-  --color-primary: #00b0f0;
-  --color-primary-hover: #009ad4;
-  --color-primary-50: #e5f7fd;
-  --color-primary-100: #b3eafa;
-  --color-primary-200: #80dcf7;
-  --color-primary-700: #007aad;
+  /* CTA / button color — brand navy, white text on top */
+  --color-primary: #1A3A52;
+  --color-primary-hover: #152f43;
+  --color-primary-50: #eaf1f7;
+  --color-primary-100: #c5d9e8;
+  --color-primary-200: #9bbfd6;
+  --color-primary-700: #0f2638;
 
-  /* Headings and dark section backgrounds — near-black, NOT blue */
-  --color-accent: #0c1115;
-  --color-accent-hover: #1a2330;
-  --color-accent-800: #060a0e;
+  /* Headings and dark section backgrounds — brand navy */
+  --color-accent: #1A3A52;
+  --color-accent-hover: #152f43;
+  --color-accent-800: #0f2638;
 
-  /* Eyebrow / decorative accent — a restrained version of brand blue */
-  --color-gold: #0099cc;
-  --color-gold-hover: #007aad;
-  --color-gold-50: #e5f7fd;
-  --color-gold-100: #b3eafa;
+  /* Eyebrow / decorative accent — brand gold */
+  --color-gold: #D4AF37;
+  --color-gold-hover: #b8941e;
+  --color-gold-50: #fdf8e7;
+  --color-gold-100: #f5e8a8;
 
   /* Surface */
-  --color-surface: #ffffff;
-  --color-surface-alt: #eef4fa;       /* alternating section bg — visibly different from white */
-  --color-surface-cool: #ddeefa;      /* form inset / deep card */
-  --color-surface-dark: #0c1115;      /* dark section bg — near-black, not blue */
-  --color-ink: #0c1115;
-  --color-ink-muted: #6a6b6c;
+  --color-surface: #FAF8F3;
+  --color-surface-alt: #f0ece2;       /* alternating section bg — slightly warmer */
+  --color-surface-cool: #e8e0d0;      /* form inset / deep card */
+  --color-surface-dark: #1A3A52;      /* dark section bg — brand navy */
+  --color-ink: #1A3A52;
+  --color-ink-muted: #5a6a7a;
   --color-ink-on-dark: rgba(255, 255, 255, 0.90);
-  --color-line: #e2e8ef;
-  --color-line-cool: #d0dae4;
+  --color-line: #ddd8cc;
+  --color-line-cool: #cfc9bc;
 
   /* Fonts (variable set by next/font in layout.tsx) */
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-playfair);
   --font-body: var(--font-inter);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #0c1115;
+  --background: #FAF8F3;
+  --foreground: #1A3A52;
 }
 
 body {
@@ -54,11 +53,11 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-fraunces), Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
   letter-spacing: -0.015em;
   font-weight: 600;
   font-optical-sizing: auto;
-  font-variation-settings: "SOFT" 40, "WONK" 0;
+  font-variation-settings: normal;
 }
 
 /* Smooth scroll + scroll-padding so the fixed header doesn't hide anchor targets */
