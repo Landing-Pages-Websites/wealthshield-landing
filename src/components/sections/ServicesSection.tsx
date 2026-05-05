@@ -170,7 +170,7 @@ export function ServicesSection() {
                       }`}
                     >
                       Delivered by the WealthShield planning team under
-                      OneAmerica Securities (Member FINRA/SIPC), co-branded
+                      our licensed planning team, co-branded
                       with your firm.
                     </div>
                   </div>

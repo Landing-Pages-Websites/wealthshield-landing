@@ -26,7 +26,7 @@ export type Testimonial = {
 
 export const BRAND = {
   name: "WealthShield Partnership",
-  fullName: "WealthShield Partnership · Greater Washington Retirement Income Solutions",
+  fullName: "WealthShield Partnership",
   tagline:
     "A turnkey financial-planning partnership, built for CPA firms.",
   heroHook:
@@ -53,8 +53,8 @@ export const BRAND = {
 
 export const STATS: { value: string; label: string }[] = [
   { value: "$40–50k", label: "Planning revenue per qualified tax case*" },
-  { value: "31 yrs", label: "Greater Washington Retirement Income Solutions in-market" },
-  { value: "129+ yrs", label: "Combined experience across our planning team" },
+  { value: "30+ yrs", label: "Doug Vincent guiding pre-retirees, owners, and high-income professionals" },
+  { value: "5-phase", label: "Turnkey system: Identify → Qualify → Onboard → Execute → Scale" },
   { value: "5-phase", label: "System: Identify → Qualify → Onboard → Execute → Scale" },
 ];
 
@@ -143,7 +143,7 @@ export const SERVICES: ServicePillar[] = [
 export const ICP_POINTS: { title: string; body: string }[] = [
   {
     title: "CPA and financial-services firms",
-    body: "$2M–$10M revenue, 15–50 professionals, 3–8 equity partners, 200–1,000 active business clients. Sweet spot is $3M–$7M firms in the Greater Washington DC / Maryland / Virginia market.",
+    body: "$2M–$10M revenue, 15–50 professionals, 3–8 equity partners, 200–1,000 active business clients. The program is built for firms ready to deepen client relationships and build a recurring planning revenue line.",
   },
   {
     title: "A client base of high-income earners",

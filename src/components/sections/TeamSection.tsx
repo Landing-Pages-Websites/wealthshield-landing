@@ -23,7 +23,7 @@ export function TeamSection() {
         <Reveal className="max-w-3xl">
           <p className="eyebrow">The team behind the program</p>
           <h2 className="mt-3 font-display text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[var(--color-ink)] heading-rule">
-            129+ years of combined financial-planning expertise.
+            Deep expertise across retirement, tax strategy, and wealth planning.
           </h2>
           <p className="mt-6 text-lg text-[var(--color-ink-muted)] leading-relaxed">
             When your firm sends a client to us, they meet credentialed

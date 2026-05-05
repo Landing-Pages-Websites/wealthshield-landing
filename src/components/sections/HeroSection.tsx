@@ -73,7 +73,7 @@ export function HeroSection() {
               >
                 <polyline points="20 6 9 17 4 12" />
               </svg>
-              129+ yrs combined team expertise
+              30+ years of financial expertise
             </span>
             <span className="hidden sm:inline text-white/30">·</span>
             <span className="flex items-center gap-1.5">
@@ -89,7 +89,7 @@ export function HeroSection() {
               >
                 <polyline points="20 6 9 17 4 12" />
               </svg>
-              OneAmerica Securities · FINRA / SIPC
+              Turnkey · Compliant · Co-branded
             </span>
           </div>
 

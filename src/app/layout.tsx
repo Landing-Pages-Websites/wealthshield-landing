@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | WealthShield Partnership",
   },
   description:
-    "A turnkey financial-planning partnership for CPA firms. Deliver retirement, tax-strategy, and wealth planning to your high-income clients — without hiring, licensing a team, or disrupting tax season. Backed by 31 years of Greater Washington Retirement Income Solutions experience.",
+    "A turnkey financial-planning partnership for CPA firms. Deliver retirement, tax-strategy, and wealth planning to your high-income clients — without hiring, licensing a team, or disrupting tax season. ",
   icons: {
     icon: "/icon.png",
     apple: "/apple-icon.png",
