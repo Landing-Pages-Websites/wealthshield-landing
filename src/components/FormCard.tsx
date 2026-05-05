@@ -4,8 +4,12 @@ import { useState, useEffect } from "react";
 import { useMegaLeadForm } from "@/hooks/useMegaLeadForm";
 import {
   CLIENT_COUNT_OPTIONS,
+  FREQUENCY_OPTIONS,
+  CURRENT_HANDLING_OPTIONS,
   EXPLORE_OPTIONS,
   qualifies,
+  type FrequencyValue,
+  type CurrentHandlingValue,
   type ExploreValue,
   type ClientCountValue,
   BRAND,
@@ -73,6 +77,8 @@ export function FormCard({
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [clientCount, setClientCount] = useState<ClientCountValue | "">("");
+  const [frequency, setFrequency] = useState<FrequencyValue | "">("");
+  const [currentHandling, setCurrentHandling] = useState<CurrentHandlingValue | "">("");
   const [explore, setExplore] = useState<ExploreValue | "">("");
 
   const [submitting, setSubmitting] = useState(false);
@@ -88,6 +94,8 @@ export function FormCard({
     /@.+\./.test(email) &&
     phoneValid &&
     clientCount.length > 0 &&
+    frequency.length > 0 &&
+    currentHandling.length > 0 &&
     explore.length > 0;
 
   // Auto-redirect to Calendly when qualified
@@ -117,6 +125,8 @@ export function FormCard({
         email: email.trim(),
         phone: phoneDigits,
         clientCount,
+        frequency,
+        currentHandling,
         explore,
         qualified: isQualified ? "yes" : "no",
       });
@@ -346,6 +356,41 @@ export function FormCard({
             </div>
           </div>
         </div>
+
+        <div>
+          <label htmlFor={`freq-${idSuffix}`} className="block text-xs font-semibold text-[var(--color-ink)] mb-1.5 uppercase tracking-wider">
+            How often do clients ask you about retirement or financial planning?
+          </label>
+          <div className="relative">
+            <select id={`freq-${idSuffix}`} name="frequency" required value={frequency}
+              onChange={(e) => setFrequency(e.target.value as FrequencyValue)}
+              className={`${inputClass} appearance-none pr-10 ${frequency === "" ? "text-[var(--color-ink-muted)]" : ""}`}>
+              <option value="" disabled>Select a frequency</option>
+              {FREQUENCY_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"><ChevronDown /></div>
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor={`handling-${idSuffix}`} className="block text-xs font-semibold text-[var(--color-ink)] mb-1.5 uppercase tracking-wider">
+            What currently happens when a client asks about life insurance or retirement income planning?
+          </label>
+          <div className="relative">
+            <select id={`handling-${idSuffix}`} name="currentHandling" required value={currentHandling}
+              onChange={(e) => setCurrentHandling(e.target.value as CurrentHandlingValue)}
+              className={`${inputClass} appearance-none pr-10 ${currentHandling === "" ? "text-[var(--color-ink-muted)]" : ""}`}>
+              <option value="" disabled>Select an answer</option>
+              {CURRENT_HANDLING_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"><ChevronDown /></div>
+          </div>
+        </div>
+
 
         <div>
           <label

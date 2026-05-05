@@ -115,7 +115,7 @@ export const SERVICES: ServicePillar[] = [
     label: "Life & Protection",
     heading: "Life Insurance & Protection Strategies",
     body:
-      "For business-owner clients, life insurance is rarely about a death benefit — it's about buy-sell funding, key-person protection, tax-advantaged cash accumulation, and estate-liquidity planning. We design and implement insurance-integrated strategies — structured, illustrated, and delivered through your firm under OneAmerica Securities. No pressure products, no commission-driven pitches. Your clients get strategy first; the policy is the instrument, not the goal.",
+      "For business-owner clients, life insurance is rarely about a death benefit — it's about buy-sell funding, key-person protection, tax-advantaged cash accumulation, and estate-liquidity planning. We design and implement insurance-integrated strategies — structured, illustrated, and delivered through your firm by our team. No pressure products, no commission-driven pitches. Your clients get strategy first; the policy is the instrument, not the goal.",
     image: "/images/service-3.png",
     outcomes: [
       "Buy-sell + key-person funding",
@@ -280,12 +280,12 @@ export const FAQS: FAQ[] = [
   {
     question: "Who owns the client relationship?",
     answer:
-      "You do. Every engagement is co-branded. Your firm is the point of trust; we're the planning engine behind you. Client communications reference your firm first. Contracts, custody, and statements flow through the proper regulated channels (OneAmerica Securities, FINRA/SIPC) but the relationship stays with your practice.",
+      "You do. Every engagement is co-branded. Your firm is the point of trust; we're the planning engine behind you. Client communications reference your firm first. Contracts, custody, and statements flow through the proper regulated channels the proper regulated channels but the relationship stays with your practice.",
   },
   {
     question: "What does compliance look like?",
     answer:
-      "All securities are offered through OneAmerica Securities, Inc. (Member FINRA, SIPC), a registered broker-dealer and investment advisor. We operate inside the same compliance framework federally regulated financial services firms use, with documented supervision, books and records, and a designated compliance contact for each partner firm.",
+      "We operate within a fully regulated financial-services compliance framework, with documented supervision, books and records, and a designated compliance contact for each partner firm.",
   },
   {
     question: "How long before we see revenue?",
@@ -302,6 +302,20 @@ export const CLIENT_COUNT_OPTIONS = [
   "50+ clients",
 ] as const;
 
+export const FREQUENCY_OPTIONS = [
+  { value: "rarely", label: "Rarely" },
+  { value: "occasionally", label: "Occasionally" },
+  { value: "frequently", label: "Frequently" },
+  { value: "very-frequently", label: "Very frequently" },
+] as const;
+
+export const CURRENT_HANDLING_OPTIONS = [
+  { value: "refer-out", label: "We refer them to another advisor" },
+  { value: "basic-in-house", label: "We provide basic advice in-house" },
+  { value: "comprehensive-in-house", label: "We provide comprehensive planning" },
+  { value: "rarely-asked", label: "Clients don't typically ask" },
+] as const;
+
 export const EXPLORE_OPTIONS = [
   { value: "definitely-yes", label: "Definitely yes", qualifies: true },
   { value: "maybe", label: "Maybe", qualifies: true },
@@ -309,6 +323,8 @@ export const EXPLORE_OPTIONS = [
   { value: "definitely-not", label: "Definitely not", qualifies: false },
 ] as const;
 
+export type FrequencyValue = (typeof FREQUENCY_OPTIONS)[number]["value"];
+export type CurrentHandlingValue = (typeof CURRENT_HANDLING_OPTIONS)[number]["value"];
 export type ExploreValue = (typeof EXPLORE_OPTIONS)[number]["value"];
 export type ClientCountValue = (typeof CLIENT_COUNT_OPTIONS)[number];
 
