@@ -35,9 +35,9 @@ export const BRAND = {
     "The WealthShield Executive Partnership Program lets CPA firms deliver full-service retirement, tax, and wealth-planning to their existing high-income clients — without hiring, retraining, or disrupting tax season. We handle licensing, delivery, and compliance. Your firm keeps the relationship and earns a new, recurring revenue line.",
   shortPositioning:
     "Turnkey financial-planning delivered under your brand. You keep the client; we handle the work.",
-  phone: "301-704-0133",
-  phoneDisplay: "(301) 704-0133",
-  phoneHref: "tel:+13017040133",
+  phone: "301-242-3303",
+  phoneDisplay: "(301) 242-3303",
+  phoneHref: "tel:+13012423303",
   email: "info@greaterris.com",
   address: {
     street: "6411 Ivy Lane, Suite 602",

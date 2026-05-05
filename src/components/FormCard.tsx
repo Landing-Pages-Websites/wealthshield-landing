@@ -120,6 +120,16 @@ export function FormCard({
         explore,
         qualified: isQualified ? "yes" : "no",
       });
+      // Fire form_submission event to GTM/dataLayer so optimizer.min.js can track it
+      // (React forms use e.preventDefault(), so the script can't natively detect submission)
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "form_submission",
+          form_id: `wealthshield-partner-form-${idSuffix}`,
+          value: 0,
+        });
+      }
     } catch (err) {
       console.error("Form submission failed:", err);
       setError("Something went wrong on our end — we also got your info.");
