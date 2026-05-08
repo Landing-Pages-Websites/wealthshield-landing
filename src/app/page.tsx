@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "WealthShield Partnership — Executive Partnership Program",
     description:
       "A turnkey financial-planning partnership for CPA firms. Keep the client. Add the revenue. Skip the build-out.",
-    url: "https://partner.wealthshieldpartnership.com",
+    url: "https://book.wealthshieldpartnership.com",
     siteName: "WealthShield Partnership",
     locale: "en_US",
     type: "website",

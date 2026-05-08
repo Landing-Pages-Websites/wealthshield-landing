@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://partner.wealthshieldpartnership.com"),
+  metadataBase: new URL("https://book.wealthshieldpartnership.com"),
   title: {
     default:
       "WealthShield Partnership — Financial Planning for Your CPA Firm's Clients",
@@ -47,14 +47,16 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} h-full antialiased`}
     >
       <head>
-        {/* CTM call-tracking: has_phone_leads=true on task. CTM account ID TBD —
-            omit script until Anthony provides tctm-id. Phone CTAs still work via tel:. */}
-        {/* MegaTag config + optimizer — site registered in Mega Admin 2026-04-24.
-            GTM + Meta Pixel still TBD (left as empty strings). */}
+        {/* CTM — account 572388 (MEGA shared, same on all LPs) */}
+        <script src="https://572388.tctm.co/t.js" async />
+        {/* Meta Pixel 1337283098129033 */}
+        <script dangerouslySetInnerHTML={{ __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1337283098129033');fbq('track','PageView');` }} />
+        <noscript><img height="1" width="1" style={{display:"none"}} src="https://www.facebook.com/tr?id=1337283098129033&ev=PageView&noscript=1" alt="" /></noscript>
+        {/* MegaTag — GTM-5WWZNV5 (MEGA shared), Pixel 1337283098129033 */}
         <meta name="mega-site-id" content="f8adeefa-6517-4242-b129-686bc3237567" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.MEGA_TAG_CONFIG={siteKey:"sk_mod24ieb_l0palnvddqm",siteId:"f8adeefa-6517-4242-b129-686bc3237567",gtmId:"",pixelId:""};`,
+            __html: `window.MEGA_TAG_CONFIG={siteKey:"sk_mod24ieb_l0palnvddqm",siteId:"f8adeefa-6517-4242-b129-686bc3237567",gtmId:"GTM-5WWZNV5",pixelId:"1337283098129033"};`,
           }}
         />
         <script
