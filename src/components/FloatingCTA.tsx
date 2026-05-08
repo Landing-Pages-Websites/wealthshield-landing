@@ -31,7 +31,7 @@ export function FloatingCTA() {
     >
       <a
         href="#contact"
-        className="inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-5 py-3 rounded-full font-semibold shadow-lg shadow-[var(--color-primary)]/30 transition"
+        className="inline-flex items-center gap-2 bg-[var(--color-gold)] hover:bg-[var(--color-gold-hover)] text-[var(--color-accent)] px-5 py-3 rounded-full font-semibold shadow-lg shadow-[var(--color-gold)]/30 transition"
       >
         {BRAND.primaryCtaShort}
         <svg

@@ -32,7 +32,7 @@ export function PrimaryCTA({
       {/* Primary button — always brand blue, white text */}
       <a
         href={href}
-        className="inline-flex items-center justify-center bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-sm"
+        className={`inline-flex items-center justify-center px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-sm ${onDark ? "bg-[var(--color-gold)] hover:bg-[var(--color-gold-hover)] text-[var(--color-accent)]" : "bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white"}`}
       >
         {label}
         <svg
