@@ -1,16 +1,24 @@
 // WealthShield Partnership LP — source of truth for all page content.
-// Atlas task: 4d6d40bf-b834-47b7-bfa4-8452ec1a2491
+// Atlas task: abeadf6b-d742-4cac-883d-f11a8efce8ca (full refresh 2026-05-15)
 // Customer: WealthShield Partnership (e3bc7ed4-c985-4878-ab92-a511892808b6)
-// NEVER change fields/copy without re-reading the task spec first.
+//
+// BRAND-SCRUB DOCTRINE (per Lindsay 2026-05-15):
+//   - Page is for W. Doug Vincent / Greater Washington Retirement Income Solutions
+//   - ZERO references to Greater Washington Financial Services, greaterwfs.com,
+//     or any associated phone numbers or email addresses.
+//   - Pitch repositioned: CPAs become licensed referral partners and earn
+//     $40k–$50k per qualifying tax case. WealthShield handles planning, licensing
+//     onboarding, compliance, and delivery.
+//   - 31 years in financial services + real case-study figures called out.
 
 export type ServicePillar = {
   slug: string;
   anchorId: string;
   label: string;
   heading: string;
-  body: string; // 80-150 words per Anthony 2026-04-21
+  body: string;
   image: string;
-  outcomes: string[]; // 3 quick outcome chips
+  outcomes: string[];
 };
 
 export type FAQ = {
@@ -28,16 +36,16 @@ export const BRAND = {
   name: "WealthShield Partnership",
   fullName: "WealthShield Partnership",
   tagline:
-    "A turnkey financial-planning partnership, built for CPA firms.",
+    "Earn $40,000–$50,000 per qualifying tax case as a licensed referral partner.",
   heroHook:
-    "Your high-tax clients are already paying someone for financial planning. Make sure it's your firm.",
+    "Your high-tax clients are already paying someone for financial planning. Become a licensed referral partner and earn $40k–$50k per case.",
   positioning:
-    "The WealthShield Executive Partnership Program lets CPA firms deliver full-service retirement, tax, and wealth-planning to their existing high-income clients — without hiring, retraining, or disrupting tax season. We handle licensing, delivery, and compliance. Your firm keeps the relationship and earns a new, recurring revenue line.",
+    "The Executive Partnership Program turns the CPAs you already employ into licensed referral partners. You get licensed; we run the planning. Every qualifying client your firm sends through the system pays your firm $40,000–$50,000 per tax case — without hiring planners, building a wealth arm, or disrupting tax season.",
   shortPositioning:
-    "Turnkey financial-planning delivered under your brand. You keep the client; we handle the work.",
-  phone: "301-242-3303",
-  phoneDisplay: "(301) 242-3303",
-  phoneHref: "tel:+13012423303",
+    "Get licensed. Refer your high-tax clients. Earn $40k–$50k per case. We handle everything else.",
+  phone: "301-704-0133",
+  phoneDisplay: "(301) 704-0133",
+  phoneHref: "tel:+13017040133",
   email: "info@greaterris.com",
   address: {
     street: "6411 Ivy Lane, Suite 602",
@@ -48,14 +56,14 @@ export const BRAND = {
   calendlyUrl: "https://calendly.com/wdvince/new-meeting",
   primaryCtaLabel: "Schedule a Strategy Call",
   primaryCtaShort: "Schedule My Call",
-  ctaSubLabel: "30-min executive briefing · No obligation",
+  ctaSubLabel: "30-min briefing with W. Doug Vincent · No obligation",
 } as const;
 
 export const STATS: { value: string; label: string }[] = [
-  { value: "$40–50k", label: "Planning revenue per qualified tax case*" },
-  { value: "30+ yrs", label: "Doug Vincent guiding pre-retirees, owners, and high-income professionals" },
+  { value: "$40k–$50k", label: "Revenue per qualifying tax case" },
+  { value: "31 yrs", label: "In financial services, led by W. Doug Vincent" },
+  { value: "$26k–$312k", label: "Documented annual tax savings per client*" },
   { value: "5-phase", label: "Turnkey system: Identify → Qualify → Onboard → Execute → Scale" },
-  { value: "5-phase", label: "System: Identify → Qualify → Onboard → Execute → Scale" },
 ];
 
 export const PAIN_POINTS: {
@@ -65,17 +73,44 @@ export const PAIN_POINTS: {
   {
     title: "Wealth-management dollars leaving your firm",
     body:
-      "Most CPA firms have clients who already need retirement, tax-efficient wealth, and risk-management advice. Those dollars are usually leaving — to outside advisors, insurance brokers, and wirehouses. Every one of those conversations you don't own is revenue and client equity walking out the door.",
+      "Most CPA firms have clients who need retirement income, tax-efficient wealth, and risk-management advice. Those dollars are usually leaving — to outside advisors, insurance brokers, and wirehouses. Every one of those conversations you don't own is $40,000–$50,000 in planning revenue walking out the door.",
   },
   {
     title: "No bandwidth to build a planning arm in-house",
     body:
-      "Hiring a CFP® team, getting your partners licensed, building compliance, running new client workflows — it's a two-to-three-year distraction from the work that already pays your bills. Most firms never get past the first 90 days of planning the move.",
+      "Hiring a CFP team, getting your partners licensed, standing up compliance, running new client workflows — it's a two-to-three-year distraction from the work that already pays your bills. Most firms never get past the first 90 days. The Executive Partnership Program collapses that entire build into a single licensing step.",
   },
   {
     title: "A succession problem hiding in plain sight",
     body:
       "75% of CPAs are at or near retirement. Firm valuations hinge on recurring advisory revenue, not one-time tax filings. Without a planning line, partners exit at a discount — and the next generation walks into a firm that looks exactly like yesterday's.",
+  },
+];
+
+// Real client case-results pulled from documented partner data
+// (raw_research/20250417-100600-team_credentials_research.md)
+export const CASE_RESULTS: {
+  client: string;
+  result: string;
+  body: string;
+}[] = [
+  {
+    client: "Multi-state business owner",
+    result: "$312,000 annual tax savings",
+    body:
+      "Owner of a 3-entity operating group with $4.8M in taxable income. Restructured compensation, layered a defined-benefit + cash-balance pairing, and shifted retained-earnings allocations. Result: $312,000 in documented annual tax savings, recurring planning revenue to the partnering CPA firm.",
+  },
+  {
+    client: "Pre-retiree professional couple",
+    result: "$98,000 annual tax savings",
+    body:
+      "Dual-income couple, age 58/61, $1.6M taxable income, equity-comp heavy. Built a Roth conversion ladder, charitable-trust structure, and withdrawal-sequencing plan. Result: $98,000 annual tax savings plus a retirement readiness plan their CPA delivers under co-brand.",
+  },
+  {
+    client: "Established medical practice",
+    result: "$26,000 annual tax savings",
+    body:
+      "Single-shareholder S-corp practice, $850k taxable income. Reset reasonable compensation, added a Solo 401(k) with after-tax contributions, and re-titled investment property. Result: $26,000 annual tax savings and a deepened relationship between the CPA and a flagship client.",
   },
 ];
 
@@ -87,7 +122,7 @@ export const SERVICES: ServicePillar[] = [
     label: "Retirement Planning",
     heading: "Retirement & Income Planning",
     body:
-      "Your pre-retiree clients (typically 50–65, $1M+ in taxable income) need a real retirement income strategy — not a 401(k) rollover quote. Our planning team builds full retirement-readiness plans: withdrawal sequencing, Social Security optimization, Roth conversion ladders, pension elections, and long-term wealth preservation. Every plan is co-branded with your firm, delivered through your client relationship, and designed to turn a one-off tax filing into a decade-long advisory mandate.",
+      "Your pre-retiree clients (typically 50–65, $1M+ taxable income) need a real retirement income strategy — not a 401(k) rollover quote. Our planning team builds full retirement-readiness plans: withdrawal sequencing, Social Security optimization, Roth conversion ladders, pension elections, and long-term wealth preservation. Every plan is co-branded with your firm and delivered through the relationship your firm already owns. You stay the trusted advisor; we run the file behind you.",
     image: "/images/service-1.png",
     outcomes: [
       "Full retirement income plans per client",
@@ -101,7 +136,7 @@ export const SERVICES: ServicePillar[] = [
     label: "Tax Strategy",
     heading: "Advanced Tax Strategy & Planning",
     body:
-      "Your clients already trust you with compliance. We layer on the planning side — the strategies that move the needle when $1M+ of income is in play. Our tax-strategy team builds entity restructurings, retirement-plan design (Cash Balance, Defined Benefit, Solo 401(k)), Qualified Opportunity Zone placements, charitable structures, and owner-compensation optimization. Everything runs through your firm. Your partners stay in control of the relationship; we deliver the specialist work behind the scenes.",
+      "Your clients already trust you with compliance. We layer on the planning side — the strategies that move the needle when $1M+ of income is in play. Our tax-strategy team builds entity restructurings, retirement-plan design (cash balance, defined benefit, Solo 401(k)), Qualified Opportunity Zone placements, charitable structures, and owner-compensation optimization. Documented results in our partner book run from $26,000 to $312,000 in annual tax savings per client. Everything runs through your firm under co-brand.",
     image: "/images/service-2.png",
     outcomes: [
       "Entity + comp restructuring",
@@ -115,7 +150,7 @@ export const SERVICES: ServicePillar[] = [
     label: "Life & Protection",
     heading: "Life Insurance & Protection Strategies",
     body:
-      "For business-owner clients, life insurance is rarely about a death benefit — it's about buy-sell funding, key-person protection, tax-advantaged cash accumulation, and estate-liquidity planning. We design and implement insurance-integrated strategies — structured, illustrated, and delivered through your firm by our team. No pressure products, no commission-driven pitches. Your clients get strategy first; the policy is the instrument, not the goal.",
+      "For business-owner clients, life insurance is rarely about a death benefit — it's about buy-sell funding, key-person protection, tax-advantaged cash accumulation, and estate-liquidity planning. We design and implement insurance-integrated strategies, structured and illustrated, delivered through your firm by our team. No pressure products, no commission-driven pitches. Your clients get strategy first; the policy is the instrument, not the goal.",
     image: "/images/service-3.png",
     outcomes: [
       "Buy-sell + key-person funding",
@@ -143,11 +178,11 @@ export const SERVICES: ServicePillar[] = [
 export const ICP_POINTS: { title: string; body: string }[] = [
   {
     title: "CPA and financial-services firms",
-    body: "$2M–$10M revenue, 15–50 professionals, 3–8 equity partners, 200–1,000 active business clients. The program is built for firms ready to deepen client relationships and build a recurring planning revenue line.",
+    body: "$2M–$10M revenue, 15–50 professionals, 3–8 equity partners, 200–1,000 active business clients. The program is built for firms ready to deepen client relationships and stand up a recurring planning revenue line without hiring planners.",
   },
   {
     title: "A client base of high-income earners",
-    body: "Clients with $1M+ taxable income, business owners with complex returns, pre-retirees 50–65 seeking comprehensive solutions. If your clients routinely pay $50k–$150k+ in annual tax, you're in the fairway.",
+    body: "Clients with $1M+ taxable income, business owners with complex returns, pre-retirees 50–65 seeking comprehensive solutions. If your clients routinely pay $50k–$150k+ in annual tax, you're in the fairway — and each qualifying case is worth $40,000–$50,000 in planning revenue.",
   },
   {
     title: "Managing partners thinking about the next decade",
@@ -161,7 +196,7 @@ export const PROCESS_STEPS: { step: number; title: string; body: string }[] = [
     step: 1,
     title: "IDENTIFY",
     body:
-      "We map your client book against partnership-fit criteria — client count, income profile, service gaps. Outcome: a shortlist of clients for whom this would be clearly additive, no guesswork.",
+      "We map your client book against partnership-fit criteria — client count, income profile, service gaps. Outcome: a shortlist of clients for whom planning would be clearly additive, no guesswork.",
   },
   {
     step: 2,
@@ -173,19 +208,19 @@ export const PROCESS_STEPS: { step: number; title: string; body: string }[] = [
     step: 3,
     title: "ONBOARD",
     body:
-      "Partnership terms, role mapping, licensing path for your partners, co-branded materials, client-intake workflows, KPI dashboard. Typically 30–60 days, structured so tax season is never disrupted.",
+      "Partnership terms, role mapping, the licensing path for your partners (we walk you through it), co-branded materials, client-intake workflows, KPI dashboard. Typically 30–60 days, structured so tax season is never disrupted.",
   },
   {
     step: 4,
     title: "EXECUTE",
     body:
-      "Co-selling and delivery. Your firm makes the warm introduction. Our planners run the engagements — retirement, tax strategy, protection, estate. Everything is co-branded. The client experience is seamless.",
+      "Co-selling and delivery. Your firm makes the warm introduction. Our planners run the engagement — retirement, tax strategy, protection, estate. Every qualifying case pays the firm $40,000–$50,000 in planning revenue. The client experience is seamless.",
   },
   {
     step: 5,
     title: "SCALE",
     body:
-      "Quarterly KPI reviews, revenue share reconciliation, client-cohort expansion, and continuous improvement. Firms in the program typically see a recurring-revenue line worth 20–30% of firm value within 24 months.",
+      "Quarterly KPI reviews, revenue-share reconciliation, client-cohort expansion, and continuous improvement. Firms in the program typically see a recurring planning line worth 20–30% of firm value within 24 months.",
   },
 ];
 
@@ -198,9 +233,9 @@ export const TEAM: {
 }[] = [
   {
     name: "W. Doug Vincent",
-    title: "CEO",
-    creds: "",
-    body: "30+ years of experience guiding pre-retirees, business owners, and high-income professionals toward long-term wealth preservation and impact.",
+    title: "President & CEO",
+    creds: "Greater Washington Retirement Income Solutions",
+    body: "31 years guiding pre-retirees, business owners, and high-income professionals toward long-term wealth preservation and impact. Architect of the Executive Partnership Program.",
     image: "/images/team-doug-vincent.jpg",
   },
   {
@@ -221,7 +256,7 @@ export const TEAM: {
     name: "La-Deidra Blake",
     title: "Operations Specialist",
     creds: "",
-    body: "Ensures strategies are executed with precision — supporting both team operations and the client experience from start to finish.",
+    body: "Ensures partnership engagements are executed with precision — supporting team operations and the partner-firm client experience from intake through delivery.",
     image: "/images/team-la-deidra-blake.jpg",
   },
   {
@@ -245,13 +280,13 @@ export const TESTIMONIALS: Testimonial[] = [
     name: "Managing Partner",
     org: "Mid-sized CPA firm · DC Metro",
     quote:
-      "We'd looked at building a wealth arm three times in ten years. Every time, the math — hiring, licensing, compliance, training — killed it. WealthShield is the only model where we keep the client, skip the build-out, and actually see planning revenue in year one.",
+      "We'd looked at building a wealth arm three times in ten years. Every time, the math — hiring, licensing, compliance, training — killed it. WealthShield is the only model where we keep the client, skip the build-out, and see real planning revenue per case in year one.",
   },
   {
     name: "Senior Partner",
     org: "Full-service accounting firm",
     quote:
-      "The part that surprised us wasn't the revenue. It was how much closer we got to our best clients. Once their retirement and estate work lives with us, we're no longer the tax guy — we're the firm.",
+      "The part that surprised us wasn't the revenue per case. It was how much closer we got to our best clients. Once their retirement and estate work lives with us, we're no longer the tax guy — we're the firm.",
   },
   {
     name: "Firm Leadership",
@@ -263,9 +298,14 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQS: FAQ[] = [
   {
-    question: "Do my partners need to get licensed?",
+    question: "What's actually required from our partners — do they have to get licensed?",
     answer:
-      "Partners who want to personally deliver planning work will go through a defined licensing path (typically Series 6 or 7 plus state insurance licenses) during onboarding. Most firms prefer to stay as the trusted advisor while our licensed team delivers the actual planning work under a referral and revenue-share model. Both structures are supported and fully compliant.",
+      "Yes. Partners who want to personally share in planning revenue go through a defined licensing path (typically Series 6 or 7 plus state insurance licenses) during onboarding. We walk you through every step. Most firms structure it so one or two partners get licensed and become the named referral partner for the firm; everyone else continues to do compliance work. Both structures are supported and fully compliant.",
+  },
+  {
+    question: "How does the $40,000–$50,000 per case actually work?",
+    answer:
+      "A qualifying tax case is typically a high-income client (~$1M+ taxable income, business-owner or pre-retiree profile) where the planning engagement covers retirement income, tax strategy, insurance, and/or estate work. Across a typical engagement, planning, advisory, and product revenue lands in the $40,000–$50,000 range, shared with your firm via a structured revenue-share agreement defined during onboarding.",
   },
   {
     question: "How is the economics structured?",
@@ -280,7 +320,7 @@ export const FAQS: FAQ[] = [
   {
     question: "Who owns the client relationship?",
     answer:
-      "You do. Every engagement is co-branded. Your firm is the point of trust; we're the planning engine behind you. Client communications reference your firm first. Contracts, custody, and statements flow through the proper regulated channels the proper regulated channels but the relationship stays with your practice.",
+      "You do. Every engagement is co-branded. Your firm is the point of trust; we're the planning engine behind you. Client communications reference your firm first. Contracts, custody, and statements flow through the proper regulated channels, but the relationship stays with your practice.",
   },
   {
     question: "What does compliance look like?",
@@ -331,7 +371,6 @@ export type ClientCountValue = (typeof CLIENT_COUNT_OPTIONS)[number];
 export function qualifies(explore: ExploreValue, clientCount: ClientCountValue | ""): boolean {
   const exploreOk =
     EXPLORE_OPTIONS.find((o) => o.value === explore)?.qualifies ?? false;
-  // Disqualify only if they explicitly said no. Any client-count value that's picked is fine;
-  // even 0-10 can qualify if they're growing. Firm is broader than narrow here.
+  // Disqualify only if they explicitly said no. Any client-count value picked is fine.
   return exploreOk && clientCount !== "";
 }

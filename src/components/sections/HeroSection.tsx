@@ -31,11 +31,11 @@ export function HeroSection() {
           </p>
 
           <h1 className="font-display text-[2.5rem] sm:text-5xl lg:text-[3.6rem] xl:text-6xl font-semibold leading-[1.05] tracking-tight">
-            Deepen your firm&apos;s{" "}
+            Earn{" "}
             <span className="italic text-[var(--color-gold-100)]">
-              financial planning.
+              $40k–$50k per tax case
             </span>
-            <br className="hidden sm:inline" /> Without hiring a soul.
+            <br className="hidden sm:inline" /> as a licensed referral partner.
           </h1>
 
           <p className="text-lg sm:text-xl text-white/80 max-w-prose leading-relaxed">
@@ -73,7 +73,7 @@ export function HeroSection() {
               >
                 <polyline points="20 6 9 17 4 12" />
               </svg>
-              30+ years of financial expertise
+              Real cases: $26k–$312k saved per client
             </span>
             <span className="hidden sm:inline text-white/30">·</span>
             <span className="flex items-center gap-1.5">
@@ -89,7 +89,7 @@ export function HeroSection() {
               >
                 <polyline points="20 6 9 17 4 12" />
               </svg>
-              Turnkey · Compliant · Co-branded
+              Turnkey · Licensed · Co-branded
             </span>
           </div>
 

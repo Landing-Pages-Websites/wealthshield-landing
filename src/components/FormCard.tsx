@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useMegaLeadForm } from "@/hooks/useMegaLeadForm";
 import {
   CLIENT_COUNT_OPTIONS,
@@ -67,6 +67,7 @@ export function FormCard({
   idSuffix = "main",
 }: Props) {
   const { submit } = useMegaLeadForm();
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -120,15 +121,39 @@ export function FormCard({
         explore,
         qualified: isQualified ? "yes" : "no",
       });
-      // Fire form_submission event to GTM/dataLayer so optimizer.min.js can track it
-      // (React forms use e.preventDefault(), so the script can't natively detect submission)
+      // Fire form_submission to GTM dataLayer + MegaTag form_submit
+      // (React forms call e.preventDefault(), so the optimizer can't natively detect submission)
       if (typeof window !== "undefined") {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
+        type DLWindow = Window & {
+          dataLayer?: unknown[];
+          MegaTag?: {
+            trackEvent?: (
+              eventName: string,
+              data?: Record<string, unknown>,
+            ) => void;
+          };
+        };
+        const w = window as unknown as DLWindow;
+        w.dataLayer = w.dataLayer || [];
+        w.dataLayer.push({
           event: "form_submission",
           form_id: `wealthshield-partner-form-${idSuffix}`,
           value: 0,
         });
+        // MegaTag form_submit event — lands in Mega Events with separated
+        // fields so each maps to its own column in Conversions + Keystone.
+        if (w.MegaTag?.trackEvent) {
+          w.MegaTag.trackEvent("form_submit", {
+            element: `wealthshield-partner-form-${idSuffix}`,
+            firstName: firstName.trim(),
+            lastName: lastName.trim(),
+            email: email.trim(),
+            phone: phoneDigits,
+            clientCount,
+            explore,
+            qualified: isQualified ? "yes" : "no",
+          });
+        }
       }
     } catch (err) {
       console.error("Form submission failed:", err);
@@ -138,6 +163,15 @@ export function FormCard({
       setSubmitted(true);
       setSubmitting(false);
     }
+  }
+
+  // Validate-first → requestSubmit() pattern. Button is type="button" so the
+  // Mega optimizer can't observe a native submit event on empty/duplicate
+  // clicks (SHLY-May-8 incident doctrine).
+  function handleSubmitClick() {
+    if (submitting || submitted) return;
+    if (!canSubmit) return;
+    formRef.current?.requestSubmit();
   }
 
   const wrapperClass =
@@ -235,7 +269,7 @@ export function FormCard({
         )}
       </div>
 
-      <form onSubmit={handleSubmit} noValidate className="space-y-3.5">
+      <form ref={formRef} onSubmit={handleSubmit} noValidate className="space-y-3.5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
           <div>
             <label htmlFor={`fn-${idSuffix}`} className="sr-only">
@@ -387,7 +421,8 @@ export function FormCard({
         </div>
 
         <button
-          type="submit"
+          type="button"
+          onClick={handleSubmitClick}
           disabled={!canSubmit || submitting || submitted}
           className="w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] disabled:opacity-60 disabled:cursor-not-allowed text-white px-6 py-3.5 rounded-lg font-semibold text-base transition shadow-sm mt-2"
         >

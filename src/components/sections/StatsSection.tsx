@@ -39,9 +39,10 @@ export function StatsSection() {
 
         <Reveal>
           <p className="mt-6 text-xs text-[var(--color-ink-muted)] italic max-w-3xl">
-            * Case-level planning revenue reflects historical WealthShield
-            engagements and is not a promise of future results. Partnership
-            economics vary by firm and are disclosed during qualification.
+            * Per-case revenue and annual tax-savings figures reflect
+            historical engagements documented in the active partner book and
+            are not a promise of future results. Partnership economics vary
+            by firm and are disclosed during qualification.
           </p>
         </Reveal>
       </div>
