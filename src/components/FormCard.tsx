@@ -68,6 +68,9 @@ export function FormCard({
 }: Props) {
   const { submit } = useMegaLeadForm();
   const formRef = useRef<HTMLFormElement | null>(null);
+  // Synchronous guard — state setters are async and batched, so we need a
+  // ref-based latch to prevent rapid-click duplicate submissions.
+  const inFlightRef = useRef(false);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -103,8 +106,9 @@ export function FormCard({
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (submitting || submitted) return;
+    if (inFlightRef.current || submitting || submitted) return;
     if (!canSubmit) return;
+    inFlightRef.current = true;
     setError(null);
     setSubmitting(true);
     const isQualified = qualifies(
@@ -167,9 +171,10 @@ export function FormCard({
 
   // Validate-first → requestSubmit() pattern. Button is type="button" so the
   // Mega optimizer can't observe a native submit event on empty/duplicate
-  // clicks (SHLY-May-8 incident doctrine).
+  // clicks (SHLY-May-8 incident doctrine). inFlightRef adds a synchronous
+  // latch so 5-clicks-in-1ms still result in exactly 1 submit.
   function handleSubmitClick() {
-    if (submitting || submitted) return;
+    if (inFlightRef.current || submitting || submitted) return;
     if (!canSubmit) return;
     formRef.current?.requestSubmit();
   }
