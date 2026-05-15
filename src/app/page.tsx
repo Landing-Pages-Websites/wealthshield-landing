@@ -10,7 +10,6 @@ import { AuthoritySection } from "@/components/sections/AuthoritySection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { CaseResultsSection } from "@/components/sections/CaseResultsSection";
 import { TeamSection } from "@/components/sections/TeamSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 
@@ -44,7 +43,6 @@ export default function Page() {
         <ServicesSection />
         <CaseResultsSection />
         <TeamSection />
-        <TestimonialsSection />
         <FAQSection />
         <ContactSection />
       </main>

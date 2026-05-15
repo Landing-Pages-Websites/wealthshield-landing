@@ -275,26 +275,13 @@ export const TEAM: {
   },
 ];
 
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    name: "Managing Partner",
-    org: "Mid-sized CPA firm · DC Metro",
-    quote:
-      "We'd looked at building a wealth arm three times in ten years. Every time, the math — hiring, licensing, compliance, training — killed it. WealthShield is the only model where we keep the client, skip the build-out, and see real planning revenue per case in year one.",
-  },
-  {
-    name: "Senior Partner",
-    org: "Full-service accounting firm",
-    quote:
-      "The part that surprised us wasn't the revenue per case. It was how much closer we got to our best clients. Once their retirement and estate work lives with us, we're no longer the tax guy — we're the firm.",
-  },
-  {
-    name: "Firm Leadership",
-    org: "CPA practice preparing for succession",
-    quote:
-      "Our valuation work made it obvious: one-time tax revenue doesn't build equity, recurring advisory does. WealthShield handed us the advisory line without asking us to become a different firm.",
-  },
-];
+// TESTIMONIALS removed 2026-05-15 by QA rework: composite/illustrative quotes
+// are not authorized for live use until the client provides real attributed
+// testimonials. Live wealthshieldpartnership.com displays NO client
+// testimonials (KB 05_brand_authority.md). Social proof on this LP comes from
+// #case-results (documented partner-book outcomes) and #team (real credentials).
+// Type kept exported for future use; the array is intentionally empty.
+export const TESTIMONIALS: Testimonial[] = [];
 
 export const FAQS: FAQ[] = [
   {

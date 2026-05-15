@@ -52,7 +52,7 @@ export function Header() {
         <div className="flex items-center gap-2 sm:gap-4">
           <a
             href={BRAND.phoneHref}
-            className="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-primary-hover)] transition"
+            className="hidden sm:inline-flex items-center gap-2 border border-[var(--color-gold)]/60 bg-white/70 hover:bg-[var(--color-gold-50)] hover:border-[var(--color-gold)] text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-primary-hover)] px-4 py-2 sm:py-2.5 rounded-lg transition shadow-sm"
           >
             <svg
               className="w-4 h-4 text-[var(--color-gold)]"

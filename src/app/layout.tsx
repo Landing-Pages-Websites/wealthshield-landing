@@ -52,11 +52,16 @@ export default function RootLayout({
         {/* Meta Pixel 1756334995333487 (refresh 2026-05-15: new pixel from task spec) */}
         <script dangerouslySetInnerHTML={{ __html: `!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1756334995333487');fbq('track','PageView');` }} />
         <noscript><img height="1" width="1" style={{display:"none"}} src="https://www.facebook.com/tr?id=1756334995333487&ev=PageView&noscript=1" alt="" /></noscript>
-        {/* MegaTag — GTM-5WWZNV5 (MEGA shared) + Meta Pixel 1756334995333487 */}
+        {/*
+          MegaTag — siteKey/siteId + Meta Pixel 1756334995333487.
+          No customer-specific GTM container provided in task input or customer profile.
+          Per division doctrine (2026-05-12), the previous shared placeholder GTM-5WWZNV5 has been REMOVED.
+          Add a real customer GTM container in a follow-up edit task if/when the client provides one.
+        */}
         <meta name="mega-site-id" content="f8adeefa-6517-4242-b129-686bc3237567" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.MEGA_TAG_CONFIG={siteKey:"sk_mod24ieb_l0palnvddqm",siteId:"f8adeefa-6517-4242-b129-686bc3237567",gtmId:"GTM-5WWZNV5",pixelId:"1756334995333487"};`,
+            __html: `window.MEGA_TAG_CONFIG={siteKey:"sk_mod24ieb_l0palnvddqm",siteId:"f8adeefa-6517-4242-b129-686bc3237567",pixelId:"1756334995333487"};`,
           }}
         />
         <script
