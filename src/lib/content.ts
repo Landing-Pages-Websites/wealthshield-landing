@@ -24,7 +24,6 @@ export type ServicePillar = {
   label: string;
   heading: string;
   body: string;
-  image: string;
   outcomes: string[];
 };
 
@@ -131,7 +130,6 @@ export const SERVICES: ServicePillar[] = [
     heading: "Retirement & Income Planning",
     body:
       "Your pre-retiree clients (typically 50–65, $1M+ taxable income) need a real retirement income strategy — not a 401(k) rollover quote. Our planning team builds full retirement-readiness plans: withdrawal sequencing, Social Security optimization, Roth conversion ladders, pension elections, and long-term wealth preservation. Every plan is co-branded with your firm and delivered through the relationship your firm already owns. You stay the trusted advisor; we run the file behind you.",
-    image: "/images/service-1.png",
     outcomes: [
       "Full retirement income plans per client",
       "Roth conversion + withdrawal sequencing",
@@ -145,7 +143,6 @@ export const SERVICES: ServicePillar[] = [
     heading: "Advanced Tax Strategy & Planning",
     body:
       "Your clients already trust you with compliance. We layer on the planning side — the strategies that move the needle when $1M+ of income is in play. Our tax-strategy team builds entity restructurings, retirement-plan design (cash balance, defined benefit, Solo 401(k)), Qualified Opportunity Zone placements, charitable structures, and owner-compensation optimization. Documented results in our partner book run from $26,000 to $312,000 in annual tax savings per client. Everything runs through your firm under co-brand.",
-    image: "/images/service-2.png",
     outcomes: [
       "Entity + comp restructuring",
       "Cash Balance / DB plan design",
@@ -159,7 +156,6 @@ export const SERVICES: ServicePillar[] = [
     heading: "Life Insurance & Protection Strategies",
     body:
       "For business-owner clients, life insurance is rarely about a death benefit — it's about buy-sell funding, key-person protection, tax-advantaged cash accumulation, and estate-liquidity planning. We design and implement insurance-integrated strategies, structured and illustrated, delivered through your firm by our team. No pressure products, no commission-driven pitches. Your clients get strategy first; the policy is the instrument, not the goal.",
-    image: "/images/service-3.png",
     outcomes: [
       "Buy-sell + key-person funding",
       "Tax-advantaged cash accumulation",
@@ -173,7 +169,6 @@ export const SERVICES: ServicePillar[] = [
     heading: "Estate & Generational Wealth Planning",
     body:
       "For the clients who moved from high-income to high-net-worth, the next question is preservation and transfer. We coordinate with your firm and the client's attorney to design generational wealth structures — irrevocable trusts, SLATs, grantor-trust strategies, charitable lead and remainder trusts, gifting ladders, and asset-titling reviews. Everything is modeled against the client's full tax picture (because your firm sees it) and executed without handing the relationship off to an outside wealth shop.",
-    image: "/images/service-4.png",
     outcomes: [
       "Trust + gifting strategy",
       "Coordinated with the client's attorney",
