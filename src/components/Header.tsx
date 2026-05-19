@@ -9,11 +9,11 @@ import { BRAND } from "@/lib/content";
  * Landing-page header per landing-page-architect SKILL Rule #3:
  * logo + phone link + single primary CTA. No nav menu.
  *
- * Brand note 2026-04-25: client provided official WealthShield Partnership
- * logo (gold emblem + navy wordmark) via Doug Vincent's Drive bundle. PNG
- * has transparent bg → sits cleanly on warm-paper header. Standing Rule #7:
- * dark logo on light header = high contrast, readable in top + scrolled
- * states.
+ * Rebrand 2026-05-18: client provided new official WealthShield Partnership
+ * logo via the NEW Drive bundle (1GQFy7DyyEWKz0DpnjoT_FheS0XQVGF5G) — pure
+ * navy crown emblem (no gold) + wordmark. PNG has transparent bg → sits
+ * cleanly on the new cool-slate header. Standing Rule #7: dark logo on
+ * light header = high contrast, readable in top + scrolled states.
  */
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -36,26 +36,34 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
         <Link
           href="#hero"
-          className="flex items-center group"
+          className="flex items-center gap-3 group"
           aria-label={`${BRAND.name} home`}
         >
           <Image
             src="/images/logo.png"
             alt={`${BRAND.name} logo`}
-            width={305}
-            height={280}
+            width={759}
+            height={600}
             priority
-            className="h-16 sm:h-20 w-auto"
+            className="h-12 sm:h-14 w-auto"
           />
+          <span className="hidden md:flex flex-col leading-tight text-[var(--color-ink)]">
+            <span className="font-display text-lg font-semibold tracking-tight">
+              WealthShield Partnership
+            </span>
+            <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--color-slate)]">
+              By {BRAND.operatingEntity}
+            </span>
+          </span>
         </Link>
 
         <div className="flex items-center gap-2 sm:gap-4">
           <a
             href={BRAND.phoneHref}
-            className="hidden sm:inline-flex items-center gap-2 border border-[var(--color-gold)]/60 bg-white/70 hover:bg-[var(--color-gold-50)] hover:border-[var(--color-gold)] text-sm font-semibold text-[var(--color-accent)] hover:text-[var(--color-primary-hover)] px-4 py-2 sm:py-2.5 rounded-lg transition shadow-sm"
+            className="hidden sm:inline-flex items-center gap-2 border border-[var(--color-line-cool)] bg-white hover:border-[var(--color-primary)]/60 hover:bg-[var(--color-surface-alt)] text-sm font-semibold text-[var(--color-ink)] px-4 py-2 sm:py-2.5 rounded-lg transition shadow-sm"
           >
             <svg
-              className="w-4 h-4 text-[var(--color-gold)]"
+              className="w-4 h-4 text-[var(--color-slate)]"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

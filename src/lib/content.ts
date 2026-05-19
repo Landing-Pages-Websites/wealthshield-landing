@@ -1,8 +1,9 @@
 // WealthShield Partnership LP — source of truth for all page content.
-// Atlas task: abeadf6b-d742-4cac-883d-f11a8efce8ca (full refresh 2026-05-15)
+// Atlas task: 05852365-7ed7-4ccc-80e0-0370d6810f14 (full rebrand 2026-05-18)
+// (prior refresh: abeadf6b-d742-4cac-883d-f11a8efce8ca, 2026-05-15)
 // Customer: WealthShield Partnership (e3bc7ed4-c985-4878-ab92-a511892808b6)
 //
-// BRAND-SCRUB DOCTRINE (per Lindsay 2026-05-15):
+// BRAND-SCRUB DOCTRINE (per Lindsay 2026-05-15, reinforced Peter 2026-05-18):
 //   - Page is for W. Doug Vincent / Greater Washington Retirement Income Solutions
 //   - ZERO references to Greater Washington Financial Services, greaterwfs.com,
 //     or any associated phone numbers or email addresses.
@@ -10,6 +11,12 @@
 //     $40k–$50k per qualifying tax case. WealthShield handles planning, licensing
 //     onboarding, compliance, and delivery.
 //   - 31 years in financial services + real case-study figures called out.
+//
+// REBRAND NOTES (2026-05-18):
+//   - Assets pulled from NEW Drive folder 1GQFy7DyyEWKz0DpnjoT_FheS0XQVGF5G.
+//   - Logo: navy crown emblem (no gold). Direction shifted from warm-paper +
+//     gold editorial (May-15 build, commit 0db9765) to cool slate-blue + navy
+//     institutional. Headshots replaced with new pack.
 
 export type ServicePillar = {
   slug: string;
@@ -35,12 +42,13 @@ export type Testimonial = {
 export const BRAND = {
   name: "WealthShield Partnership",
   fullName: "WealthShield Partnership",
+  operatingEntity: "Greater Washington Retirement Income Solutions",
   tagline:
     "Earn $40,000–$50,000 per qualifying tax case as a licensed referral partner.",
   heroHook:
-    "Your high-tax clients are already paying someone for financial planning. Become a licensed referral partner and earn $40k–$50k per case.",
+    "Add a recurring planning revenue line to your CPA firm without hiring planners — refer your high-tax clients into the Executive Partnership Program and book $40k–$50k per qualifying case.",
   positioning:
-    "The Executive Partnership Program turns the CPAs you already employ into licensed referral partners. You get licensed; we run the planning. Every qualifying client your firm sends through the system pays your firm $40,000–$50,000 per tax case — without hiring planners, building a wealth arm, or disrupting tax season.",
+    "The Executive Partnership Program — by Greater Washington Retirement Income Solutions — turns the CPAs you already employ into licensed referral partners. You get licensed; our planning team runs the engagement. Every qualifying client your firm refers through the system pays your firm $40,000–$50,000 per tax case — without hiring planners, building a wealth arm, or disrupting tax season.",
   shortPositioning:
     "Get licensed. Refer your high-tax clients. Earn $40k–$50k per case. We handle everything else.",
   phone: "301-704-0133",

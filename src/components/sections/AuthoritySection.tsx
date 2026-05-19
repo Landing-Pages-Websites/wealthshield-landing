@@ -27,21 +27,23 @@ export function AuthoritySection() {
             </p>
           </Reveal>
 
-          <Reveal delay={120} className="space-y-4">
+          <Reveal delay={120} className="space-y-0 divide-y divide-[var(--color-line)] border-y border-[var(--color-line)]">
             {ICP_POINTS.map((point, i) => (
               <div
                 key={point.title}
-                className="relative pl-16 pr-6 py-6 rounded-2xl bg-[var(--color-surface)] border border-[var(--color-line)] shadow-sm hover:shadow-md hover:border-[var(--color-gold)]/40 transition"
+                className="grid grid-cols-[auto_1fr] gap-5 py-6"
               >
-                <div className="absolute left-5 top-6 w-8 h-8 rounded-full bg-[var(--color-primary)] text-[var(--color-gold-100)] flex items-center justify-center font-display font-semibold text-base ring-4 ring-[var(--color-surface)]">
-                  {i + 1}
+                <div className="font-display text-[var(--color-slate-soft)] text-xl font-semibold leading-none tabular-nums pt-1">
+                  {String(i + 1).padStart(2, "0")}
                 </div>
-                <h3 className="font-display text-lg sm:text-xl font-semibold text-[var(--color-accent)] leading-snug">
-                  {point.title}
-                </h3>
-                <p className="mt-2 text-sm sm:text-base text-[var(--color-ink-muted)] leading-relaxed">
-                  {point.body}
-                </p>
+                <div>
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-[var(--color-ink)] leading-snug">
+                    {point.title}
+                  </h3>
+                  <p className="mt-2 text-sm sm:text-base text-[var(--color-ink-muted)] leading-relaxed">
+                    {point.body}
+                  </p>
+                </div>
               </div>
             ))}
           </Reveal>

@@ -1,47 +1,60 @@
 @import "tailwindcss";
 
-/* WealthShield Partnership — Brand tokens
- * Sourced from live wealthshieldpartnership.com CSS (--primary, --chart-1, --primary-foreground).
- * Navy #1A3A52 · Gold #D4AF37 · Warm paper #FAF8F3 · Font: Playfair Display
+/* WealthShield Partnership — Brand tokens (rebrand 2026-05-18)
+ *
+ * Source: NEW Drive bundle (1GQFy7DyyEWKz0DpnjoT_FheS0XQVGF5G) — pure-navy
+ * crown logo, no gold emblem. Color direction reset from "navy + warm gold
+ * editorial" to a more institutional palette: brand navy + cool slate, with
+ * gold reserved as a thin accent only (rules, dividers, micro-eyebrows).
+ *
+ * Operating entity for the page: Greater Washington Retirement Income
+ * Solutions / W. Doug Vincent, President & CEO. ZERO references to Greater
+ * Washington Financial Services / greaterwfs.com / 301-242-3303 / pixel
+ * 1337283098129033 anywhere in src/.
  */
 @theme {
-  /* CTA / button color — brand navy, white text on top */
+  /* Brand navy (unchanged) */
   --color-primary: #1A3A52;
   --color-primary-hover: #152f43;
-  --color-primary-50: #eaf1f7;
-  --color-primary-100: #c5d9e8;
-  --color-primary-200: #9bbfd6;
+  --color-primary-50: #ebf0f5;
+  --color-primary-100: #c4d2de;
+  --color-primary-200: #93a9bd;
   --color-primary-700: #0f2638;
 
-  /* Headings and dark section backgrounds — brand navy */
   --color-accent: #1A3A52;
   --color-accent-hover: #152f43;
   --color-accent-800: #0f2638;
 
-  /* Eyebrow / decorative accent — brand gold */
-  --color-gold: #D4AF37;
-  --color-gold-hover: #b8941e;
-  --color-gold-50: #fdf8e7;
-  --color-gold-100: #f5e8a8;
+  /* New: cool institutional slate — primary neutral on the rebrand */
+  --color-slate: #5a6e82;
+  --color-slate-strong: #455769;
+  --color-slate-soft: #8c9bac;
 
-  /* Surface */
-  --color-surface: #FAF8F3;
-  --color-surface-alt: #f0ece2;       /* alternating section bg — slightly warmer */
-  --color-surface-cool: #e8e0d0;      /* form inset / deep card */
-  --color-surface-dark: #1A3A52;      /* dark section bg — brand navy */
+  /* Gold — kept for thin accent only (eyebrows, rules); no longer a fill color */
+  --color-gold: #B89540;
+  --color-gold-hover: #9a7d34;
+  --color-gold-50: #f6f0dc;
+  --color-gold-100: #ebdfac;
+
+  /* Surface — cool white, replacing the warm cream of the May-15 build */
+  --color-surface: #F4F7FA;
+  --color-surface-alt: #E8EEF4;
+  --color-surface-cool: #D8E1EB;
+  --color-surface-dark: #1A3A52;
+
   --color-ink: #1A3A52;
-  --color-ink-muted: #5a6a7a;
-  --color-ink-on-dark: rgba(255, 255, 255, 0.90);
-  --color-line: #ddd8cc;
-  --color-line-cool: #cfc9bc;
+  --color-ink-muted: #51637a;
+  --color-ink-on-dark: rgba(255, 255, 255, 0.92);
 
-  /* Fonts (variable set by next/font in layout.tsx) */
+  --color-line: #d5dde5;
+  --color-line-cool: #c7d0db;
+
   --font-display: var(--font-playfair);
   --font-body: var(--font-inter);
 }
 
 :root {
-  --background: #FAF8F3;
+  --background: #F4F7FA;
   --foreground: #1A3A52;
 }
 
@@ -54,52 +67,52 @@ body {
 
 h1, h2, h3, h4 {
   font-family: var(--font-playfair), Georgia, serif;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.018em;
   font-weight: 600;
   font-optical-sizing: auto;
   font-variation-settings: normal;
 }
 
-/* Smooth scroll + scroll-padding so the fixed header doesn't hide anchor targets */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
 }
 
-/* Eyebrow label */
+/* Eyebrow — institutional small-caps slate instead of gold */
 .eyebrow {
   font-family: var(--font-inter), sans-serif;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
-  font-size: 0.72rem;
-  color: var(--color-gold);
+  font-size: 0.7rem;
+  color: var(--color-slate);
 }
 
 .eyebrow-on-dark {
-  color: var(--color-gold-100);
+  color: rgba(255, 255, 255, 0.78);
 }
 
-/* Dark sections */
+/* Hero / contact dark surface — cleaner: solid navy + faint diagonal slate wash
+   (replaces the pinstripe-navy treatment from the May-15 build) */
 .bg-pinstripe-navy {
   background-color: var(--color-surface-dark);
   background-image:
-    repeating-linear-gradient(
+    linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.025) 0px,
-      rgba(255, 255, 255, 0.025) 1px,
-      transparent 1px,
-      transparent 18px
+      rgba(255, 255, 255, 0.018) 0%,
+      rgba(255, 255, 255, 0) 38%,
+      rgba(255, 255, 255, 0.025) 62%,
+      rgba(255, 255, 255, 0) 100%
     );
 }
 
-/* Subtle brand blue accent underline */
+/* Headline underline — slate accent (was gold in May-15) */
 .heading-rule::after {
   content: "";
   display: block;
-  width: 3.5rem;
+  width: 3rem;
   height: 2px;
-  background: var(--color-primary);
+  background: var(--color-slate);
   margin-top: 1rem;
 }
 
@@ -107,12 +120,35 @@ html {
   background: var(--color-gold-100);
 }
 
-/* bg-paper = alternating light blue-gray (used by Stats, Authority, Services, Testimonials) */
+/* Bracket label — used on case results, replaces gold dot eyebrow */
+.bracket-label {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: var(--color-slate);
+}
+.bracket-label::before { content: "[\00a0\00a0"; color: var(--color-slate-soft); }
+.bracket-label::after { content: "\00a0\00a0]"; color: var(--color-slate-soft); }
+
+/* Alternating section surface — cool slate-blue paper */
 .bg-paper {
   background-color: var(--color-surface-alt);
 }
 
-/* Serif display variant helper */
+/* Display font helper (no Fraunces — Playfair only on this build) */
 .font-display {
-  font-family: var(--font-fraunces), Georgia, serif;
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* Numbered index — large light-slate display digit used on Pain & Process */
+.index-numeral {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 600;
+  color: var(--color-slate-soft);
+  letter-spacing: -0.04em;
+  font-variant-numeric: lining-nums tabular-nums;
 }

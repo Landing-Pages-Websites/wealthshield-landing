@@ -32,21 +32,27 @@ export function CaseResultsSection() {
         <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {CASE_RESULTS.map((c, i) => (
             <Reveal key={c.client} delay={i * 120}>
-              <article className="h-full bg-[var(--color-surface-alt)] rounded-2xl border border-[var(--color-line)] shadow-sm p-7 flex flex-col">
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-gold)] mb-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)]" />
-                  Case
+              <article className="h-full bg-white rounded-xl border border-[var(--color-line)] p-7 flex flex-col">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="bracket-label">
+                    Case 0{i + 1}
+                  </span>
+                  <span className="font-display text-xs font-semibold tabular-nums text-[var(--color-slate-soft)]">
+                    Documented
+                  </span>
                 </div>
 
-                <p className="text-sm text-[var(--color-ink-muted)] font-semibold uppercase tracking-wider">
-                  {c.client}
-                </p>
-
-                <p className="mt-3 font-display text-3xl sm:text-[2rem] font-semibold text-[var(--color-primary)] leading-tight">
+                <p className="font-display text-[2.1rem] sm:text-[2.4rem] font-semibold text-[var(--color-ink)] leading-none tracking-tight">
                   {c.result}
                 </p>
 
-                <p className="mt-5 text-[var(--color-ink-muted)] leading-relaxed text-[0.98rem] flex-1">
+                <p className="mt-4 text-[0.72rem] text-[var(--color-slate)] font-semibold uppercase tracking-[0.18em]">
+                  {c.client}
+                </p>
+
+                <div className="mt-4 h-px w-10 bg-[var(--color-slate-soft)]" />
+
+                <p className="mt-4 text-[var(--color-ink-muted)] leading-relaxed text-[0.98rem] flex-1">
                   {c.body}
                 </p>
               </article>

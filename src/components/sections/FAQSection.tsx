@@ -27,9 +27,9 @@ export function FAQSection() {
             return (
               <Reveal key={f.question} delay={i * 50}>
                 <div
-                  className={`rounded-xl border bg-[var(--color-surface)] transition ${
+                  className={`rounded-xl border bg-white transition ${
                     isOpen
-                      ? "border-[var(--color-gold)]/60 shadow-md"
+                      ? "border-[var(--color-primary)]/45 shadow-md"
                       : "border-[var(--color-line)]"
                   }`}
                 >
@@ -44,7 +44,7 @@ export function FAQSection() {
                     </span>
                     <span
                       className={`flex-shrink-0 w-8 h-8 rounded-full border border-[var(--color-line)] flex items-center justify-center text-[var(--color-primary)] transition-transform duration-200 ${
-                        isOpen ? "rotate-45 bg-[var(--color-gold-50)] border-[var(--color-gold)]" : ""
+                        isOpen ? "rotate-45 bg-[var(--color-surface-alt)] border-[var(--color-primary)]/40" : ""
                       }`}
                       aria-hidden="true"
                     >
